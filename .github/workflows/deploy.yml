@@ -19,10 +19,9 @@ jobs:
           script: |
             cd /opt/amanat_submissions
             git pull origin master
-            cd deploy
             # Build sequentially to avoid OOM on low-memory server (3.8GB)
-            docker-compose -f docker-compose.prod.yml build --no-cache backend
-            docker-compose -f docker-compose.prod.yml build --no-cache telegram_bot
-            docker-compose -f docker-compose.prod.yml build --no-cache frontend
-            docker-compose -f docker-compose.prod.yml up -d --force-recreate
+            docker compose -f docker-compose.yml build --no-cache backend
+            docker compose -f docker-compose.yml build --no-cache telegram-bot
+            docker compose -f docker-compose.yml build --no-cache frontend
+            docker compose -f docker-compose.yml up -d --force-recreate
             docker image prune -f

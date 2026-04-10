@@ -51,11 +51,11 @@ npm run build        # Production build
 npm run lint         # ESLint
 ```
 
-### Docker Production (from `deploy/`)
+### Docker Production (from project root)
 
 ```bash
-docker-compose -f docker-compose.prod.yml up -d --build
-docker-compose -f docker-compose.prod.yml logs -f <service>
+docker compose -f docker-compose.yml up -d --build
+docker compose -f docker-compose.yml logs -f <service>
 ```
 
 ## Architecture
@@ -118,9 +118,12 @@ Key patterns:
 
 ## Production Deployment
 
-Three Docker containers on `shared_network` (external) behind a reverse proxy:
-- `digital-deputat-backend` (port 8011→8000, Gunicorn)
-- `digital-deputat-frontend` (port 3011→3000, Next.js standalone)
-- `digital-deputat-telegram-bot` (internal only)
+Six Docker containers on `amanat_network`, proxied by host nginx:
+- `amanat-backend` (port 8011→8000, Daphne ASGI — handles HTTP + WebSocket)
+- `amanat-frontend` (port 3011→3000, Next.js standalone)
+- `amanat-celery` (Celery worker + beat scheduler, internal only)
+- `amanat-telegram-bot` (internal only)
+- `amanat-postgres` (internal only)
+- `amanat-redis` (internal only)
 
-PostgreSQL runs in a shared external container (`shared-postgres`).
+See `DEPLOYMENT.md` for full setup instructions.

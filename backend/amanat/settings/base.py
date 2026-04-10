@@ -224,3 +224,24 @@ APPEAL_MESSAGE_LIMIT = int(config('APPEAL_MESSAGE_LIMIT', default=10))
 # Telegram (optional for development)
 TELEGRAM_BOT_TOKEN = config('TELEGRAM_BOT_TOKEN', default='')
 TELEGRAM_WEBHOOK_URL = config('TELEGRAM_WEBHOOK_URL', default='')
+
+# Celery Beat Schedule
+from celery.schedules import crontab
+CELERY_BEAT_SCHEDULE = {
+    'auto-close-resolved-appeals': {
+        'task': 'apps.appeals.tasks.auto_close_resolved_appeals',
+        'schedule': crontab(hour=2, minute=0),
+    },
+    'send-daily-summary-to-deputies': {
+        'task': 'apps.appeals.tasks.send_daily_summary_to_deputies',
+        'schedule': crontab(hour=9, minute=0),
+    },
+    'schedule-notification-reminders': {
+        'task': 'apps.notifications.tasks.schedule_notification_reminders',
+        'schedule': crontab(hour=10, minute=0),
+    },
+    'cleanup-old-notifications': {
+        'task': 'apps.notifications.tasks.cleanup_old_notifications',
+        'schedule': crontab(hour=3, minute=0, day_of_week=0),
+    },
+}

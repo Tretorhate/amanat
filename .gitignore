@@ -39,9 +39,13 @@ logs/
 .env.development
 .env.test
 .env.*
+!.env.example
 backend/.env
 frontend/.env
 telegram_bot/.env
+
+# Dev compose (local only, not committed)
+compose.yml
 
 # Build outputs
 dist/
