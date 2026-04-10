@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ожидаемые результаты после 3 месяцев (пилот)</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #F8FAFC;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #FFFFFF;
+        }
+
+        .header-bg {
+            background-color: #005A9C; /* KZ Blue */
+            height: 100px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+        }
+
+        .header-accent {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #00B1B0; /* Technology Green */
+        }
+
+        .title-font {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .kpi-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #F1F5F9;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .kpi-value {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 32px;
+            margin-bottom: 4px;
+        }
+
+        .kpi-label {
+            font-size: 14px;
+            color: #64748B;
+            font-weight: 500;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .progress-track {
+            width: 100%;
+            height: 8px;
+            background-color: #F1F5F9;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .kpi-icon {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .quote-container {
+            background-color: #F0FDFA;
+            border-left: 4px solid #00B1B0;
+            padding: 24px 32px;
+            border-radius: 8px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .quote-icon {
+            font-size: 32px;
+            color: #00B1B0;
+            opacity: 0.3;
+        }
+
+        .quote-text {
+            font-size: 18px;
+            font-style: italic;
+            color: #334155;
+            font-weight: 500;
+        }
+
+        .quote-author {
+            font-size: 14px;
+            color: #64748B;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        .blue-kpi .kpi-value { color: #3B82F6; }
+        .blue-kpi .kpi-icon { color: #3B82F6; background-color: #EFF6FF; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
+        .blue-kpi .progress-fill { background-color: #3B82F6; }
+
+        .green-kpi .kpi-value { color: #10B981; }
+        .green-kpi .kpi-icon { color: #10B981; background-color: #ECFDF5; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
+        .green-kpi .progress-fill { background-color: #10B981; }
+
+        .purple-kpi .kpi-value { color: #8B5CF6; }
+        .purple-kpi .kpi-icon { color: #8B5CF6; background-color: #F5F3FF; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
+        .purple-kpi .progress-fill { background-color: #8B5CF6; }
+
+        .orange-kpi .kpi-value { color: #F59E0B; }
+        .orange-kpi .kpi-icon { color: #F59E0B; background-color: #FFFBEB; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
+        .orange-kpi .progress-fill { background-color: #F59E0B; }
+
+        .teal-kpi .kpi-value { color: #00B1B0; }
+        .teal-kpi .kpi-icon { color: #00B1B0; background-color: #F0FDFA; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
+        .teal-kpi .progress-fill { background-color: #00B1B0; }
+
+        .red-kpi .kpi-value { color: #EF4444; }
+        .red-kpi .kpi-icon { color: #EF4444; background-color: #FEF2F2; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
+        .red-kpi .progress-fill { background-color: #EF4444; }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg z-10">
+<h1 class="title-font font-bold text-3xl text-white tracking-wide">
+                ОЖИДАЕМЫЕ РЕЗУЛЬТАТЫ (ПИЛОТ 3 МЕСЯЦА)
+            </h1>
+<div class="header-accent"></div>
+<!-- Slide Number -->
+<div class="absolute right-10 top-8 text-white text-opacity-50 font-mono text-lg">13</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-16 py-10 flex flex-col bg-gray-50">
+<!-- KPI Grid -->
+<div class="grid grid-cols-3 gap-6 mb-8 h-80">
+<!-- KPI 1 -->
+<div class="kpi-card blue-kpi">
+<div>
+<div class="flex justify-between items-start">
+<div class="kpi-icon"><i class="fas fa-thumbs-up"></i></div>
+<span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Удобство</span>
+</div>
+<div class="kpi-value">70%+</div>
+<p class="kpi-label">Граждан оценивают платформу как «удобную» и «понятную»</p>
+</div>
+<div class="progress-track">
+<div class="progress-fill" style="width: 70%;"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="kpi-card green-kpi">
+<div>
+<div class="flex justify-between items-start">
+<div class="kpi-icon"><i class="fas fa-user-check"></i></div>
+<span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Активность</span>
+</div>
+<div class="kpi-value">50%+</div>
+<p class="kpi-label">Депутатов используют платформу в ежедневном режиме</p>
+</div>
+<div class="progress-track">
+<div class="progress-fill" style="width: 50%;"></div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="kpi-card purple-kpi">
+<div>
+<div class="flex justify-between items-start">
+<div class="kpi-icon"><i class="fas fa-stopwatch"></i></div>
+<span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Скорость</span>
+</div>
+<div class="kpi-value">&lt;24 часа</div>
+<p class="kpi-label">Среднее время первого ответа на обращение гражданина</p>
+</div>
+<div class="progress-track">
+<div class="progress-fill" style="width: 85%;"></div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="kpi-card teal-kpi">
+<div>
+<div class="flex justify-between items-start">
+<div class="kpi-icon"><i class="fas fa-robot"></i></div>
+<span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Точность AI</span>
+</div>
+<div class="kpi-value">80%+</div>
+<p class="kpi-label">Обращений корректно категоризированы без участия человека</p>
+</div>
+<div class="progress-track">
+<div class="progress-fill" style="width: 80%;"></div>
+</div>
+</div>
+<!-- KPI 5 -->
+<div class="kpi-card orange-kpi">
+<div>
+<div class="flex justify-between items-start">
+<div class="kpi-icon"><i class="fas fa-magic"></i></div>
+<span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Автоматизация</span>
+</div>
+<div class="kpi-value">-60%</div>
+<p class="kpi-label">Сокращение ручной работы аппарата по сортировке писем</p>
+</div>
+<div class="progress-track">
+<div class="progress-fill" style="width: 60%;"></div>
+</div>
+</div>
+<!-- KPI 6 -->
+<div class="kpi-card red-kpi">
+<div>
+<div class="flex justify-between items-start">
+<div class="kpi-icon"><i class="fas fa-users"></i></div>
+<span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Вовлеченность</span>
+</div>
+<div class="kpi-value">×3</div>
+<p class="kpi-label">Рост количества обращений по сравнению с бумажным форматом</p>
+</div>
+<div class="progress-track">
+<div class="progress-fill" style="width: 90%;"></div>
+</div>
+</div>
+</div>
+<!-- Testimonial Quote -->
+<div class="quote-container mt-auto mb-4">
+<i class="fas fa-quote-left quote-icon"></i>
+<div class="flex-1">
+<p class="quote-text">«Платформа Amanat реально разгрузила мою почту. Автоматическая сортировка и шаблоны ответов сэкономили мне около 15 часов рутинной работы в неделю, которые я теперь трачу на реальные встречи с избирателями»</p>
+<p class="quote-author">— Депутат городского маслихата (участник пилотного проекта)</p>
+</div>
+<div class="w-16 h-16 rounded-full bg-gray-200 overflow-hidden border-2 border-white shadow-md flex items-center justify-center text-gray-400">
+<i class="fas fa-user text-3xl"></i>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-10 bg-white flex items-center justify-between px-16 border-t border-gray-200 mt-auto z-10">
+<div class="text-gray-400 text-xs font-medium">AMANAT CITIZEN PLATFORM</div>
+<div class="flex gap-2">
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-green-500"></div> <!-- Current section indicator -->
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          port: 22
+          command_timeout: 30m
+          script: |
+            cd /opt/amanat_submissions
+            git pull origin master
+            cd deploy
+            # Build sequentially to avoid OOM on low-memory server (3.8GB)
+            docker-compose -f docker-compose.prod.yml build --no-cache backend
+            docker-compose -f docker-compose.prod.yml build --no-cache telegram_bot
+            docker-compose -f docker-compose.prod.yml build --no-cache frontend
+            docker-compose -f docker-compose.prod.yml up -d --force-recreate
+            docker image prune -f

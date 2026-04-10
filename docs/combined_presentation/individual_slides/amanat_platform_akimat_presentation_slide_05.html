@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Соответствие стратегии цифровизации РК</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #F8FAFC;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #FFFFFF;
+        }
+
+        .header-bg {
+            background-color: #005A9C; /* KZ Blue */
+            height: 100px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+        }
+
+        .header-accent {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #00B1B0; /* Technology Green */
+        }
+
+        .title-font {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .strategy-card {
+            border-left: 4px solid #005A9C;
+            background-color: #F0F9FF; /* Sky-50 */
+        }
+
+        .quote-box {
+            background-color: #005A9C;
+            color: white;
+            position: relative;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 90, 156, 0.3);
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: -20px;
+            left: 40px;
+            background-color: #00B1B0;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 40%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23005a9c' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: 0;
+            mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+            -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+        }
+
+        .kz-ornament {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+            width: 300px;
+            height: 300px;
+            pointer-events: none;
+        }
+
+        .stat-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid #00B1B0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #005A9C;
+            background-color: white;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Pattern -->
+<div class="bg-pattern"></div>
+<!-- Header -->
+<div class="header-bg z-10">
+<h1 class="title-font font-bold text-3xl text-white tracking-wide">
+                СООТВЕТСТВИЕ СТРАТЕГИИ ЦИФРОВИЗАЦИИ РК
+            </h1>
+<div class="header-accent"></div>
+<!-- Slide Number -->
+<div class="absolute right-10 top-8 text-white text-opacity-50 font-mono text-lg">05</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-16 py-10 flex flex-col justify-between z-10">
+<!-- Strategy Grid -->
+<div class="grid grid-cols-2 gap-8 mb-8">
+<!-- Item 1 -->
+<div class="flex items-start gap-5 p-4 rounded-lg hover:bg-white hover:shadow-sm transition-all border border-transparent hover:border-blue-100">
+<div class="stat-circle flex-shrink-0 text-2xl">92%</div>
+<div>
+<h3 class="font-bold text-xl text-blue-900 mb-2 title-font">Госуслуг в электронном виде</h3>
+<p class="text-gray-600 text-sm leading-relaxed">
+                            Казахстан является лидером GovTech в регионе. В 2024 году подавляющее большинство услуг переведено в цифровой формат, создавая привычку у граждан использовать онлайн-инструменты.
+                        </p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start gap-5 p-4 rounded-lg hover:bg-white hover:shadow-sm transition-all border border-transparent hover:border-blue-100">
+<div class="w-20 h-20 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 text-blue-600">
+<i class="fas fa-brain text-3xl"></i>
+</div>
+<div>
+<h3 class="font-bold text-xl text-blue-900 mb-2 title-font">Национальная AI концепция</h3>
+<p class="text-gray-600 text-sm leading-relaxed">
+                            Стратегия развития искусственного интеллекта на 2024–2029 годы ставит приоритетом внедрение AI в государственное управление для повышения эффективности.
+                        </p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start gap-5 p-4 rounded-lg hover:bg-white hover:shadow-sm transition-all border border-transparent hover:border-blue-100">
+<div class="w-20 h-20 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 text-blue-600">
+<i class="fas fa-file-contract text-3xl"></i>
+</div>
+<div>
+<h3 class="font-bold text-xl text-blue-900 mb-2 title-font">Инициатива сенаторов (Янв 2025)</h3>
+<p class="text-gray-600 text-sm leading-relaxed">
+                            Официальное предложение о создании единой цифровой платформы для маслихатов всех уровней для решения проблемы низкой автоматизации.
+                        </p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex items-start gap-5 p-4 rounded-lg hover:bg-white hover:shadow-sm transition-all border border-transparent hover:border-blue-100">
+<div class="w-20 h-20 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 text-blue-600">
+<i class="fas fa-laptop-code text-3xl"></i>
+</div>
+<div>
+<h3 class="font-bold text-xl text-blue-900 mb-2 title-font">Digital Kazakhstan</h3>
+<p class="text-gray-600 text-sm leading-relaxed">
+                            Государственная программа, направленная на ускорение темпов развития экономики и улучшение качества жизни населения за счет использования цифровых технологий.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Quote Section -->
+<div class="quote-box p-8 mt-4 mx-8">
+<div class="quote-icon">
+<i class="fas fa-quote-left"></i>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex-grow pl-8 border-l-2 border-blue-400 border-opacity-30">
+<p class="text-xl font-medium italic leading-relaxed text-white">
+                            «Властные структуры обязаны обеспечить прозрачность инфраструктурных проектов и процесса принятия решений, главным образом используя <span class="text-teal-300 font-bold border-b border-teal-300">цифровые инструменты</span>, что укрепит доверие граждан к государству.»
+                        </p>
+<p class="mt-4 text-sm font-bold text-blue-200 uppercase tracking-widest title-font">
+                            — ИЗ ПОСЛАНИЯ ПРЕЗИДЕНТА РЕСПУБЛИКИ КАЗАХСТАН
+                        </p>
+</div>
+<div class="flex-shrink-0 opacity-20">
+<svg fill="none" height="120" viewbox="0 0 24 24" width="120" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5"></path>
+<path d="M12 16V12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M12 8H12.01" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-10 bg-gray-50 flex items-center justify-between px-16 border-t border-gray-200 mt-auto z-10">
+<div class="text-gray-400 text-xs font-medium">AMANAT CITIZEN PLATFORM</div>
+<div class="flex gap-2">
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-blue-600"></div> <!-- Current section indicator -->
+</div>
+</div>
+</div>
+</body>
+</html>

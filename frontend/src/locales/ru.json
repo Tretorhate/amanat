@@ -1,0 +1,877 @@
+{
+  "common": {
+    "appName": "Аманат",
+    "platform": "Платформа \"Аманат\"",
+    "loading": "Загрузка...",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "delete": "Удалить",
+    "edit": "Редактировать",
+    "close": "Закрыть",
+    "confirm": "Подтвердить",
+    "back": "Назад",
+    "next": "Далее",
+    "submit": "Отправить",
+    "search": "Поиск",
+    "filter": "Фильтр",
+    "export": "Экспорт",
+    "print": "Печать",
+    "refresh": "Обновить",
+    "yes": "Да",
+    "no": "Нет",
+    "error": "Ошибка",
+    "success": "Успешно",
+    "warning": "Предупреждение",
+    "info": "Информация",
+    "personalCabinet": "Личный кабинет",
+    "myProfile": "Мой профиль",
+    "myDocuments": "Мои документы",
+    "logout": "Выйти",
+    "logoutSuccess": "Вы успешно вышли из системы",
+    "citizen": "Гражданин",
+    "responded": "Отвечено",
+    "outOf5": "из 5",
+    "deleteConfirm": {
+      "title": "Подтверждение удаления",
+      "message": "Вы уверены, что хотите удалить",
+      "warning": "Это действие невозможно отменить.",
+      "confirmLabel": "Введите",
+      "confirmKeyword": "ДА",
+      "confirmInstruction": "для подтверждения",
+      "confirmPlaceholder": "Введите ДА",
+      "deleteButton": "Удалить",
+      "deletingButton": "Удаление...",
+      "cancelButton": "Отмена"
+    },
+    "roles": {
+      "deputy": "Депутат",
+      "administrator": "Администратор",
+      "citizen": "Гражданин",
+      "user": "Пользователь"
+    },
+    "notifications": {
+      "title": "Уведомления",
+      "markAllAsRead": "Прочитать все",
+      "noNotifications": "Нет уведомлений",
+      "newNotification": "Новое уведомление"
+    }
+  },
+
+  "error": {
+    "notFound": {
+      "title": "Страница не найдена",
+      "description": "К сожалению, запрошенная страница не существует или была удалена.",
+      "backHome": "Вернуться на главную"
+    }
+  },
+
+  "nav": {
+    "home": "Главная",
+    "dashboard": "Панель управления",
+    "profile": "Профиль",
+    "appeals": "Обращения",
+    "messages": "Сообщения",
+    "analytics": "Аналитика",
+    "users": "Пользователи",
+    "settings": "Настройки",
+    "logout": "Выход",
+    "login": "Вход",
+    "register": "Регистрация"
+  },
+  "sidebar": {
+    "deputy": {
+      "dashboard": "Панель управления",
+      "constituencies": "Избирательные округа"
+    },
+    "admin": {
+      "dashboard": "Панель управления",
+      "appeals": "Все обращения",
+      "users": "Пользователи",
+      "constituencies": "Избирательные округа",
+      "analytics": "Аналитика"
+    }
+  },
+
+  "auth": {
+    "login": {
+      "title": "Войти в кабинет",
+      "username": "Имя пользователя",
+      "password": "Пароль",
+      "usernamePlaceholder": "Введите имя пользователя",
+      "passwordPlaceholder": "Введите пароль",
+      "submitButton": "Войти",
+      "submitting": "Вход...",
+      "backToHome": "Вернуться на главную",
+      "welcomeMessage": "Добро пожаловать, {name}!",
+      "errorInvalidCredentials": "Неверное имя пользователя или пароль"
+    },
+    "register": {
+      "title": "Регистрация",
+      "fullName": "Полное имя",
+      "email": "Email",
+      "confirmPassword": "Подтвердите пароль",
+      "submitButton": "Зарегистрироваться",
+      "submitting": "Регистрация...",
+      "haveAccount": "Уже есть аккаунт?",
+      "loginLink": "Войти",
+      "successMessage": "Регистрация успешна!",
+      "errorPasswordMismatch": "Пароли не совпадают",
+      "errorUserExists": "Пользователь с таким именем уже существует"
+    },
+    "logout": {
+      "confirm": "Вы уверены, что хотите выйти?",
+      "success": "Вы успешно вышли из системы"
+    }
+  },
+
+  "home": {
+    "hero": {
+      "title": "Платформа",
+      "titleHighlight": "\"Аманат\"",
+      "subtitle": "Прямая связь между гражданами и депутатами. Подавайте обращения, отслеживайте статус и получайте ответы.",
+      "loginButton": "Войти в систему",
+      "registerButton": "Зарегистрироваться"
+    },
+    "features": {
+      "submitAppeals": {
+        "title": "Подача обращений",
+        "description": "Отправляйте обращения вашему депутату напрямую через платформу"
+      },
+      "directDialog": {
+        "title": "Прямой диалог",
+        "description": "Общайтесь с депутатами в режиме реального времени"
+      },
+      "trackStatus": {
+        "title": "Отслеживание статуса",
+        "description": "Следите за ходом рассмотрения ваших обращений"
+      }
+    },
+    "analytics": {
+      "title": "Платформа в реальном времени",
+      "subtitle": "Актуальная статистика деятельности платформы \"Аманат\"",
+      "totalAppeals": "Всего обращений",
+      "resolved": "Решено",
+      "averageResolutionTime": "Среднее время решения",
+      "resolutionRate": "Процент решения",
+      "hours": "ч."
+    },
+    "insights": {
+      "title": "Аналитика и инсайты",
+      "subtitle": "Ключевые метрики и тренды деятельности платформы",
+      "platformActivity": "Активность платформы",
+      "averageAppealsPerDay": "В среднем {count} обращений в день",
+      "peakActivity": "Пиковая активность",
+      "peakActivityDescription": "{count} обращений {date}",
+      "topCategory": "Основная категория",
+      "topCategoryDescription": "{category} ({count} обращений)",
+      "activityTrend": "Тренд активности",
+      "trendGrowing": "Количество обращений растет",
+      "trendStable": "Количество обращений стабильно",
+      "noData": "Нет данных"
+    },
+    "charts": {
+      "categoryDistribution": "Распределение по категориям",
+      "noDataToDisplay": "Нет данных для отображения",
+      "other": "Прочее"
+    },
+    "cta": {
+      "title": "Готовы поделиться своим обращением?",
+      "subtitle": "Присоединяйтесь к тысячам граждан, которые уже используют платформу \"Аманат\" для решения своих проблем.",
+      "button": "Создать первое обращение"
+    },
+    "footer": {
+      "title": "Платформа \"Аманат\"",
+      "description": "Прямая связь между гражданами и их представителями",
+      "navigation": "Навигация",
+      "information": "Информация",
+      "contacts": "Контакты",
+      "about": "О платформе",
+      "support": "Поддержка",
+      "terms": "Условия использования",
+      "copyright": "© 2026 Платформа \"Аманат\". Все права защищены."
+    }
+  },
+
+  "appeals": {
+    "status": {
+      "all": "Все статусы",
+      "pending": "Ожидает",
+      "in_progress": "В работе",
+      "resolved": "Решено",
+      "rejected": "Отклонено",
+      "closed": "Закрыто"
+    },
+    "priority": {
+      "low": "Низкий",
+      "normal": "Нормальный",
+      "high": "Высокий",
+      "urgent": "Срочный"
+    },
+    "category": {
+      "all": "Все категории",
+      "infrastructure": "Инфраструктура",
+      "safety": "Безопасность",
+      "healthcare": "Здравоохранение",
+      "education": "Образование",
+      "environment": "Экология",
+      "transport": "Транспорт",
+      "housing": "Жилищно-коммунальное хозяйство",
+      "utilities": "Коммунальные услуги",
+      "social_services": "Социальные услуги",
+      "other": "Прочее"
+    },
+    "list": {
+      "title": "Обращения",
+      "myAppeals": "Мои обращения",
+      "allAppeals": "Все обращения",
+      "createNew": "Создать обращение",
+      "noAppeals": "Обращений пока нет",
+      "filters": {
+        "all": "Все",
+        "byStatus": "По статусу",
+        "byCategory": "По категории",
+        "byDate": "По дате"
+      }
+    },
+    "details": {
+      "title": "Детали обращения",
+      "appealNumber": "Обращение №",
+      "createdAt": "Создано",
+      "createdLabel": "Создано:",
+      "updatedAt": "Обновлено",
+      "status": "Статус",
+      "categoryLabel": "Категория:",
+      "category": "Категория",
+      "description": "Описание",
+      "attachments": "Вложения",
+      "messages": "Сообщения",
+      "firstResponseLabel": "Первый ответ:",
+      "closedLabel": "Закрыто:",
+      "deputy": "Депутат",
+      "citizen": "Гражданин",
+      "notFound": "Обращение не найдено",
+      "rateQuality": "Оцените качество решения",
+      "yourRating": "Ваша оценка: {rating} из 5",
+      "history": "История",
+      "appealCreated": "Обращение создано",
+      "deputyResponded": "Депутат ответил на обращение",
+      "statusChanged": "Статус изменен на",
+      "recently": "Недавно",
+      "appealClosed": "Обращение закрыто",
+      "qualityRating": "Оценка качества: {rating} из 5",
+      "yourDeputy": "Ваш депутат",
+      "district": "Округ:",
+      "information": "Информация",
+      "messageCount": "Сообщений:",
+      "backToList": "Назад к списку",
+      "returnBack": "Вернуться назад",
+      "dialogWithCitizen": "Диалог с гражданином",
+      "citizenInfo": "Информация о гражданине",
+      "changeHistory": "История изменений",
+      "fullName": "ФИО",
+      "statistics": "Статистика",
+      "messagesCount": "Сообщений",
+      "firstResponse": "Первый ответ",
+      "closedAt": "Закрыто",
+      "quickActions": "Быстрые действия",
+      "quickActionsHints": {
+        "useForm": "Используйте форму ниже для изменения статуса",
+        "sendMessages": "Отправляйте сообщения через чат",
+        "watchLimit": "Следите за лимитом сообщений (10 макс.)"
+      },
+      "activityLog": {
+        "appealCreatedByCitizen": "Обращение создано гражданином",
+        "youResponded": "Вы ответили на обращение",
+        "statusChangedTo": "Статус изменен на \"{status}\"",
+        "appealClosed": "Обращение закрыто",
+        "citizenRated": "Гражданин оценил работу: {rating} из 5",
+        "recently": "Недавно"
+      },
+      "failedToLoad": "Не удалось загрузить обращение",
+      "appealNotFound": "Обращение не найдено",
+      "responseSentSuccess": "Ответ отправлен успешно",
+      "errorSendingResponse": "Ошибка при отправке ответа",
+      "citizenLabel": "Гражданин"
+    },
+    "response": {
+      "title": "Ответ на обращение",
+      "changeStatus": "Изменить статус",
+      "messageToCitizen": "Сообщение гражданину (необязательно)",
+      "messagePlaceholder": "Введите ваш ответ или комментарий...",
+      "charactersCount": "{count} / 1000 символов",
+      "internalNotes": "Внутренние заметки (не видны гражданину)",
+      "internalNotesPlaceholder": "Добавьте внутренние заметки для документации...",
+      "internalNotesCount": "{count} / 500 символов • Эти заметки не видны гражданину",
+      "sendResponse": "Отправить ответ"
+    },
+    "create": {
+      "title": "Новое обращение",
+      "selectCategory": "Выберите категорию",
+      "subject": "Тема",
+      "subjectPlaceholder": "Кратко опишите суть обращения",
+      "description": "Описание",
+      "descriptionPlaceholder": "Подробно опишите вашу проблему или вопрос",
+      "attachFiles": "Прикрепить файлы",
+      "submit": "Отправить обращение",
+      "success": "Обращение успешно создано!",
+      "error": "Ошибка при создании обращения",
+      "infoBoxTitle": "Важная информация",
+      "infoAutomatic": "Обращение будет автоматически направлено вашему депутату",
+      "infoCategory": "Категория и приоритет обращения будут определены системой автоматически",
+      "infoMessages": "Вы можете обмениваться сообщениями с депутатом (максимум 10 сообщений)",
+      "infoNotification": "Вы получите уведомление о рассмотрении вашего обращения",
+      "infoTimeframe": "Средний срок рассмотрения обращений - 7 дней"
+    },
+    "messages": {
+      "title": "Сообщения",
+      "messageLimit": "Лимит сообщений: {current} из {max}",
+      "limitReached": "Достигнут лимит сообщений для этого обращения",
+      "placeholder": "Введите сообщение...",
+      "send": "Отправить",
+      "you": "Вы",
+      "noMessages": "Сообщений пока нет"
+    },
+    "documents": {
+      "pageTitle": "Мои документы",
+      "pageDescription": "Загружайте и управляйте вашими документами",
+      "uploadButton": "Загрузить документ",
+      "uploadFormTitle": "Загрузить новый документ",
+      "documentType": "Тип документа",
+      "documentNumber": "Номер документа",
+      "documentNumberPlaceholder": "Введите номер",
+      "issueDate": "Дата выдачи",
+      "expiryDate": "Срок действия (опционально)",
+      "issuedBy": "Кем выдан",
+      "issuedByPlaceholder": "Орган, выдавший документ",
+      "fileLabel": "Файл документа (JPG, PNG, PDF, макс. 10MB)",
+      "uploadSubmit": "Загрузить документ",
+      "uploading": "Загрузка...",
+      "cancel": "Отмена",
+      "noDocuments": "Нет документов",
+      "noDocumentsDesc": "Вы еще не загрузили ни одного документа",
+      "uploadFirst": "Загрузить первый документ",
+      "verified": "Проверен",
+      "pending": "На проверке",
+      "uploaded": "Загружен",
+      "errorLoadingDocuments": "Не удалось загрузить документы",
+      "errorDocumentNumber": "Номер документа обязателен",
+      "errorIssueDate": "Дата выдачи обязательна",
+      "errorIssuedBy": "Орган выдачи обязателен",
+      "errorFile": "Файл документа обязателен",
+      "errorFormValidation": "Пожалуйста, исправьте ошибки в форме",
+      "successUpload": "Документ успешно загружен",
+      "errorUpload": "Ошибка загрузки документа",
+      "confirmDelete": "Вы уверены, что хотите удалить этот документ?",
+      "successDelete": "Документ удален",
+      "errorDelete": "Ошибка удаления документа",
+      "errorFileSize": "Размер файла не должен превышать 10MB",
+      "errorFileType": "Допустимые форматы: JPG, PNG, PDF"
+    }
+  },
+
+  "dashboard": {
+    "citizen": {
+      "title": "Личный кабинет",
+      "welcome": "Добро пожаловать, {name}",
+      "stats": {
+        "totalAppeals": "Всего обращений",
+        "pending": "Ожидают ответа",
+        "inProgress": "В работе",
+        "resolved": "Решено"
+      },
+      "recentAppeals": "Мои обращения",
+      "viewAll": "Смотреть все",
+      "createAppeal": "Создать обращение",
+      "profile": "Мой профиль",
+      "profileDesc": "Просмотр и редактирование профиля",
+      "documents": "Мои документы",
+      "documentsDesc": "Управление вашими документами",
+      "found": "Найдено",
+      "searchPlaceholder": "Поиск по названию или описанию...",
+      "allStatuses": "Все статусы",
+      "allCategories": "Все категории",
+      "noAppeals": "У вас пока нет обращений",
+      "notFound": "Ничего не найдено",
+      "createFirst": "Создать первое обращение",
+      "deputy": "Депутат",
+      "page": "Страница {current} из {total}",
+      "previous": "Назад",
+      "next": "Вперёд"
+    },
+    "deputy": {
+      "title": "Кабинет депутата",
+      "welcome": "Добро пожаловать, {name}",
+      "welcomeSubtitle": "Управляйте обращениями граждан эффективно и прозрачно",
+      "citizenAppeals": "Обращения граждан",
+      "found": "Найдено",
+      "searchPlaceholder": "Поиск по названию, описанию или имени гражданина...",
+      "allCategories": "Все категории",
+      "thisMonth": "за этот месяц",
+      "requireAttention": "Требуют внимания",
+      "activeTasks": "Активные задачи",
+      "averageRating": "средняя оценка",
+      "ready": "Готово",
+      "unanswered": "Без ответа",
+      "noAppealsYet": "Обращений пока нет",
+      "noAppealsDescription": "Когда граждане подадут обращения, они появятся здесь",
+      "notFoundTitle": "Ничего не найдено",
+      "notFoundDescription": "Попробуйте изменить фильтры или поисковый запрос",
+      "page": "Страница {current} из {total}",
+      "previous": "Назад",
+      "forward": "Вперёд",
+      "tabs": {
+        "all": "Все",
+        "pending": "Ожидают",
+        "inProgress": "В работе",
+        "resolved": "Решено",
+        "closed": "Закрыто",
+        "rejected": "Отклонено",
+        "urgent": "Срочные",
+        "unanswered": "Без ответа"
+      },
+      "statsLabels": {
+        "totalAppeals": "Всего обращений",
+        "pendingResponse": "Ожидают ответа",
+        "inProgress": "В работе",
+        "resolved": "Решено"
+      },
+      "stats": {
+        "totalAppeals": "Всего обращений",
+        "pending": "Новые",
+        "inProgress": "В работе",
+        "resolved": "Решено сегодня"
+      },
+      "district": "Округ",
+      "performance": "Показатели",
+      "averageResponseTime": "Среднее время ответа",
+      "satisfactionRate": "Рейтинг удовлетворенности"
+    },
+    "admin": {
+      "title": "Панель администратора",
+      "subtitle": "Управление системой и мониторинг всех обращений",
+      "stats": {
+        "totalUsers": "Всего пользователей",
+        "totalDeputies": "Депутатов",
+        "totalCitizens": "Граждан",
+        "totalAppeals": "Всего обращений",
+        "totalAppealsLabel": "Всего обращений",
+        "pendingAppeals": "Ожидают обработки",
+        "resolvedAppeals": "Решено",
+        "citizens": "Граждан",
+        "deputies": "Депутатов",
+        "averageResponseTime": "Среднее время ответа"
+      },
+      "quickActions": {
+        "allAppeals": {
+          "title": "Все обращения",
+          "description": "Просмотр и управление всеми обращениями в системе",
+          "button": "Открыть"
+        },
+        "users": {
+          "title": "Пользователи",
+          "description": "Управление пользователями и их правами доступа",
+          "button": "Открыть"
+        },
+        "analytics": {
+          "title": "Аналитика",
+          "description": "Детальная статистика и отчеты по системе",
+          "button": "Открыть"
+        }
+      },
+      "systemStatus": {
+        "title": "Статус системы",
+        "apiServer": "API сервер",
+        "database": "База данных",
+        "webSocket": "WebSocket",
+        "operational": "Работает нормально",
+        "connected": "Подключена",
+        "active": "Активен"
+      },
+      "systemHealth": "Состояние системы",
+      "recentActivity": "Недавняя активность"
+    }
+  },
+
+  "profile": {
+    "pageTitle": "Мой профиль",
+    "pageDescription": "Управление профилем",
+    "title": "Профиль",
+    "personalInfo": "Личная информация",
+    "fullName": "ФИО",
+    "fullNameRequired": "ФИО обязательно",
+    "email": "Email",
+    "emailRequired": "Email обязателен",
+    "emailInvalid": "Неверный формат email",
+    "phone": "Телефон",
+    "phoneRequired": "Телефон обязателен",
+    "phoneInvalid": "Неверный формат телефона",
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "username": "Юзернейм:",
+    "usernameLabel": "Имя пользователя",
+    "role": "Роль:",
+    "roleLabel": "Роль",
+    "district": "Округ",
+    "status": "Статус:",
+    "active": "Активен",
+    "inactive": "Неактивен",
+    "additionalInfo": "Дополнительная информация",
+    "information": "Информация",
+    "changePasswordTitle": "Изменить пароль",
+    "changePassword": "Сменить пароль",
+    "currentPassword": "Текущий пароль",
+    "currentPasswordRequired": "Текущий пароль обязателен",
+    "newPassword": "Новый пароль",
+    "newPasswordRequired": "Новый пароль обязателен",
+    "newPasswordMin": "Минимум 8 символов",
+    "confirmPassword": "Подтвердите новый пароль",
+    "passwordMismatch": "Пароли не совпадают",
+    "enterPlaceholder": "Введите {label}",
+    "notSpecified": "Не указано",
+    "saving": "Сохранение...",
+    "saved": "Сохранить",
+    "cancel": "Отмена",
+    "updateSuccess": "Изменения сохранены",
+    "updateError": "Ошибка при сохранении",
+    "passwordChangeSuccess": "Пароль изменен",
+    "passwordChangeError": "Ошибка изменения пароля",
+    "profileNotFound": "Профиль не найден",
+    "back": "Вернуться",
+    "loadError": "Не удалось загрузить профиль",
+    "administrator": "Администратор",
+    "deputy": "Депутат",
+    "citizen": "Гражданин"
+  },
+
+  "users": {
+    "title": "Управление пользователями",
+    "addUser": "Добавить пользователя",
+    "editUser": "Редактировать пользователя",
+    "deleteUser": "Удалить пользователя",
+    "confirmDelete": "Вы уверены, что хотите удалить этого пользователя?",
+    "role": {
+      "citizen": "Гражданин",
+      "deputy": "Депутат",
+      "admin": "Администратор"
+    },
+    "status": {
+      "active": "Активен",
+      "inactive": "Неактивен"
+    },
+    "table": {
+      "name": "Имя",
+      "email": "Email",
+      "role": "Роль",
+      "status": "Статус",
+      "actions": "Действия"
+    }
+  },
+
+  "analytics": {
+    "title": "Аналитика",
+    "overview": "Обзор",
+    "trends": "Тенденции",
+    "categoryDistribution": "Распределение по категориям",
+    "statusDistribution": "Распределение по статусам",
+    "timeAnalysis": "Анализ времени",
+    "deputyPerformance": "Показатели депутатов",
+    "citizenSatisfaction": "Удовлетворенность граждан",
+    "exportReport": "Экспорт отчета",
+    "period": {
+      "today": "Сегодня",
+      "week": "Неделя",
+      "month": "Месяц",
+      "year": "Год",
+      "custom": "Произвольный период"
+    }
+  },
+
+  "errors": {
+    "unauthorized": "Доступ запрещен",
+    "notFound": "Страница не найдена",
+    "serverError": "Ошибка сервера",
+    "networkError": "Ошибка сети",
+    "unknownError": "Неизвестная ошибка",
+    "sessionExpired": "Сессия истекла. Пожалуйста, войдите снова.",
+    "permissionDenied": "У вас нет прав для выполнения этого действия",
+    "validationError": "Ошибка валидации данных",
+    "fileUploadError": "Ошибка при загрузке файла",
+    "fileSizeError": "Размер файла превышает допустимый лимит"
+  },
+
+  "validation": {
+    "required": "Это поле обязательно для заполнения",
+    "email": "Введите корректный email",
+    "phone": "Введите корректный номер телефона",
+    "minLength": "Минимальная длина: {min} символов",
+    "maxLength": "Максимальная длина: {max} символов",
+    "passwordMismatch": "Пароли не совпадают",
+    "invalidFormat": "Неверный формат"
+  },
+
+  "deputy": {
+    "constituencies": {
+      "errorLoadingConstituencies": "Ошибка загрузки округов",
+      "updated": "Округ обновлен",
+      "created": "Округ создан",
+      "errorSaving": "Ошибка при сохранении округа",
+      "deleted": "Округ удален",
+      "deletedBulk": "{count} округ(ов) удален(о)",
+      "errorDeleting": "Ошибка при удалении округа",
+      "unknownDeputy": "Неизвестный депутат",
+      "title": "Мои избирательные округа",
+      "totalCount": "Всего округов: {count}",
+      "selected": "Выбрано: {count}",
+      "addConstituency": "Добавить округ",
+      "deleteSelected": "Удалить ({count})",
+      "totalConstituencies": "Всего округов",
+      "table": {
+        "name": "Название",
+        "region": "Регион",
+        "district": "Район",
+        "population": "Население",
+        "createdAt": "Дата создания",
+        "actions": "Действия"
+      },
+      "noConstituencies": "У вас пока нет избирательных округов",
+      "noConstituenciesDescription": "Добавьте информацию о районах, которые вы представляете",
+      "addFirst": "Добавить первый округ",
+      "edit": "Редактировать",
+      "delete": "Удалить",
+      "refresh": "Обновить",
+      "loadError": "Ошибка загрузки округов",
+      "updateSuccess": "Округ обновлен",
+      "createSuccess": "Округ создан",
+      "saveError": "Ошибка при сохранении округа",
+      "deleteSuccess": "Округ удален",
+      "bulkDeleteSuccess": "{count} округ(ов) удален(о)",
+      "deleteError": "Ошибка при удалении округа"
+    },
+    "constituencyForm": {
+      "editTitle": "Редактировать избирательный округ",
+      "createTitle": "Создать избирательный округ",
+      "deputyLabel": "Депутат *",
+      "deputyPlaceholder": "Выберите депутата",
+      "nameLabel": "Название округа *",
+      "namePlaceholder": "Например: Первый округ",
+      "regionLabel": "Регион *",
+      "regionPlaceholder": "Например: Астана",
+      "districtLabel": "Район *",
+      "districtPlaceholder": "Например: Центральный район",
+      "populationLabel": "Население (необязательно)",
+      "populationPlaceholder": "Например: 50000",
+      "cancelButton": "Отмена",
+      "saveButton": "Сохранить",
+      "savingButton": "Сохранение...",
+      "errors": {
+        "nameRequired": "Название округа обязательно",
+        "nameMaxLength": "Максимум 100 символов",
+        "regionRequired": "Регион обязателен",
+        "regionMaxLength": "Максимум 100 символов",
+        "districtRequired": "Район обязателен",
+        "districtMaxLength": "Максимум 100 символов",
+        "deputyRequired": "Выберите депутата",
+        "populationInvalid": "Население должно быть числом",
+        "populationNegative": "Население не может быть отрицательным"
+      }
+    }
+  },
+
+  "notifications": {
+    "newAppeal": "Новое обращение от {name}",
+    "appealStatusChanged": "Статус обращения изменен на \"{status}\"",
+    "newMessage": "Новое сообщение в обращении №{id}",
+    "appealAssigned": "Вам назначено новое обращение",
+    "markAllRead": "Отметить все как прочитанные",
+    "noNotifications": "Уведомлений нет"
+  },
+
+  "time": {
+    "justNow": "Только что",
+    "minutesAgo": "{count} мин. назад",
+    "hoursAgo": "{count} ч. назад",
+    "daysAgo": "{count} дн. назад",
+    "weeksAgo": "{count} нед. назад",
+    "monthsAgo": "{count} мес. назад"
+  },
+
+  "admin": {
+    "notSpecified": "Не указан",
+    "notAssigned": "Не назначен",
+    "analytics": {
+      "title": "Аналитика и отчеты",
+      "subtitle": "Детальная статистика работы платформы",
+      "exportButton": "Экспорт отчета",
+      "statsLabels": {
+        "totalAppeals": "Всего обращений",
+        "pendingAppeals": "Ожидают ответа",
+        "inProgressAppeals": "В работе",
+        "resolvedAppeals": "Решено",
+        "averageResolutionTime": "Среднее время разрешения"
+      }
+    },
+    "appeals": {
+      "title": "Все обращения",
+      "foundCount": "Найдено",
+      "selectedCount": "Выбрано",
+      "refresh": "Обновить",
+      "export": "Экспорт",
+      "filters": {
+        "searchPlaceholder": "Поиск по названию, описанию или имени...",
+        "allStatuses": "Все статусы",
+        "allCategories": "Все категории",
+        "allPriorities": "Все приоритеты"
+      },
+      "table": {
+        "headers": {
+          "id": "ID",
+          "title": "Название",
+          "citizen": "Информация о гражданине",
+          "deputy": "Назначенный депутат",
+          "status": "Статус",
+          "category": "Категория",
+          "priority": "Приоритет",
+          "created": "Дата создания",
+          "actions": "Действия",
+          "user": "ФИО",
+          "phone": "Телефон",
+          "district": "Округ"
+        }
+      },
+      "details": {
+        "description": "Описание",
+        "appealDetails": "Детали обращения",
+        "status": "Статус",
+        "category": "Категория",
+        "priority": "Приоритет",
+        "messagesCount": "Сообщений",
+        "respondedDate": "Дата ответа",
+        "satisfactionRating": "Рейтинг удовлетворения",
+        "rating": "Рейтинг",
+        "noResponse": "Нет ответа"
+      },
+      "emptyState": "Обращения не найдены",
+      "pagination": {
+        "previous": "Назад",
+        "next": "Вперёд",
+        "showing": "Страница {current} из {total}"
+      },
+      "bulkActions": {
+        "selected": "Выбрано {count}",
+        "changeStatus": "Изменить статус",
+        "delete": "Удалить"
+      },
+      "deleteItemLabel": "обращение",
+      "deleteItemLabelPlural": "обращения",
+      "selectNone": "Выберите обращения",
+      "selectForDelete": "Выберите обращения для удаления",
+      "selectForExport": "Выберите обращения для экспорта",
+      "toasts": {
+        "loadError": "Ошибка загрузки обращений",
+        "statusUpdateSuccess": "Статус изменен для {count} обращений на \"{status}\"",
+        "statusUpdateError": "Ошибка при изменении статуса",
+        "deleteSuccess": "Удалено {count} обращений",
+        "deleteError": "Ошибка при удалении обращения",
+        "exportStart": "Экспорт {count} обращений..."
+      }
+    },
+    "users": {
+      "title": "Управление пользователями",
+      "totalUsers": "Всего пользователей",
+      "addUserButton": "Добавить пользователя",
+      "deleteItemLabel": "пользователя",
+      "deleteItemLabelPlural": "пользователей",
+      "stats": {
+        "total": "Всего",
+        "admins": "Администраторы",
+        "deputies": "Депутаты",
+        "citizens": "Граждане",
+        "active": "Активные"
+      },
+      "searchPlaceholder": "Поиск по имени, email, юзернейму...",
+      "roleFilter": {
+        "allRoles": "Все роли",
+        "admins": "Администраторы",
+        "deputies": "Депутаты",
+        "citizens": "Граждане"
+      },
+      "table": {
+        "headers": {
+          "user": "Пользователь",
+          "email": "Email",
+          "role": "Роль",
+          "status": "Статус",
+          "actions": "Действия"
+        }
+      },
+      "status": {
+        "active": "Активен",
+        "inactive": "Неактивен"
+      },
+      "statusToggle": {
+        "active": "Активен",
+        "inactive": "Неактивен"
+      },
+      "notFound": "Пользователи не найдены",
+      "notSpecified": "Не указан",
+      "toasts": {
+        "loadError": "Ошибка загрузки пользователей",
+        "activated": "Пользователь активирован",
+        "deactivated": "Пользователь деактивирован",
+        "toggleError": "Ошибка при изменении статуса пользователя",
+        "createSuccess": "Пользователь создан",
+        "updateSuccess": "Пользователь обновлен",
+        "deleteSuccess": "Пользователь удален",
+        "saveError": "Ошибка при сохранении пользователя",
+        "bulkDeleteSuccess": "Массовое удаление пользователей"
+      }
+    },
+    "constituencies": {
+      "title": "Избирательные округа",
+      "addButton": "Добавить округ",
+      "editTitle": "Редактировать округ",
+      "createTitle": "Создать округ",
+      "successMessage": "Округ успешно сохранен",
+      "errorMessage": "Ошибка при сохранении округа"
+    }
+  },
+
+  "users": {
+    "form": {
+      "createTitle": "Создать пользователя",
+      "editTitle": "Редактировать пользователя",
+      "labels": {
+        "username": "Имя пользователя",
+        "email": "Email",
+        "firstName": "Имя",
+        "lastName": "Фамилия",
+        "phone": "Телефон",
+        "role": "Роль",
+        "password": "Пароль",
+        "passwordOptional": "Пароль (оставьте пустым, если не меняете)"
+      },
+      "placeholders": {
+        "password": "Введите пароль",
+        "passwordNoChange": "Не менять"
+      },
+      "roles": {
+        "citizen": "Гражданин",
+        "deputy": "Депутат",
+        "admin": "Администратор"
+      },
+      "errors": {
+        "usernameRequired": "Имя пользователя обязательно",
+        "emailRequired": "Email обязателен",
+        "emailInvalid": "Некорректный формат email",
+        "firstNameRequired": "Имя обязательно",
+        "lastNameRequired": "Фамилия обязательна",
+        "phoneRequired": "Телефон обязателен",
+        "passwordRequired": "Пароль обязателен при создании пользователя",
+        "passwordMinLength": "Пароль должен быть не менее 8 символов"
+      },
+      "cancelButton": "Отмена",
+      "saveButton": "Сохранить",
+      "savingButton": "Сохранение..."
+    }
+  }
+}

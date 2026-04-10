@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Риски и гарантии</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #F8FAFC;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #FFFFFF;
+        }
+
+        .header-bg {
+            background-color: #005A9C; /* KZ Blue */
+            height: 100px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+        }
+
+        .header-accent {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #00B1B0; /* Technology Green */
+        }
+
+        .title-font {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Two Column Layout */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            height: 100%;
+            align-items: stretch;
+        }
+
+        .column-card {
+            border-radius: 16px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border: 1px solid #E2E8F0;
+            height: 100%;
+        }
+
+        .card-header {
+            padding: 24px 30px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .risk-header {
+            background-color: #FFF7ED; /* Orange-50 */
+            border-bottom-color: #FED7AA;
+        }
+
+        .guarantee-header {
+            background-color: #F0FDF4; /* Green-50 */
+            border-bottom-color: #BBF7D0;
+        }
+
+        .header-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .risk-icon-bg {
+            background-color: #FFEDD5;
+            color: #EA580C;
+        }
+
+        .guarantee-icon-bg {
+            background-color: #DCFCE7;
+            color: #16A34A;
+        }
+
+        .header-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #334155;
+        }
+
+        .card-body {
+            padding: 30px;
+            background-color: white;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* Risk Item */
+        .risk-item {
+            display: flex;
+            gap: 16px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #E2E8F0;
+        }
+        
+        .risk-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .risk-number {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 20px;
+            color: #F97316;
+            opacity: 0.3;
+            min-width: 24px;
+        }
+
+        .risk-content h4 {
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: 6px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .risk-arrow {
+            color: #94A3B8;
+            font-size: 12px;
+        }
+
+        .mitigation-badge {
+            display: inline-block;
+            background-color: #FFF7ED;
+            color: #EA580C;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid #FFEDD5;
+            margin-top: 4px;
+        }
+
+        /* Guarantee Item */
+        .guarantee-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 16px;
+            background-color: #F8FAFC;
+            border-radius: 12px;
+            border-left: 4px solid #10B981;
+            transition: all 0.2s ease;
+        }
+        
+        .guarantee-item:hover {
+            background-color: #F0FDF4;
+            transform: translateX(4px);
+        }
+
+        .check-icon {
+            color: #10B981;
+            font-size: 20px;
+            margin-top: 2px;
+        }
+
+        .guarantee-text {
+            color: #334155;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .guarantee-highlight {
+            font-weight: 700;
+            color: #15803D;
+        }
+
+        .trust-seal {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            width: 100px;
+            height: 100px;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+        }
+
+        .shield-decoration {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 140px;
+            color: #00B1B0;
+            opacity: 0.03;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg z-10">
+<h1 class="title-font font-bold text-3xl text-white tracking-wide">
+                РИСКИ И ГАРАНТИИ
+            </h1>
+<div class="header-accent"></div>
+<!-- Slide Number -->
+<div class="absolute right-10 top-8 text-white text-opacity-50 font-mono text-lg">14</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-16 py-10 bg-gray-50 flex flex-col justify-center relative overflow-hidden">
+<i class="fas fa-shield-alt shield-decoration"></i>
+<div class="content-grid w-full max-w-6xl mx-auto z-10">
+<!-- Left Column: Risks & Mitigation -->
+<div class="column-card border-orange-200">
+<div class="card-header risk-header">
+<div class="header-icon risk-icon-bg">
+<i class="fas fa-exclamation-triangle"></i>
+</div>
+<div>
+<h2 class="header-title text-gray-800">РИСКИ И МИТИГАЦИЯ</h2>
+<p class="text-sm text-gray-500 font-medium">Мы предусмотрели возможные проблемы</p>
+</div>
+</div>
+<div class="card-body">
+<!-- Risk 1 -->
+<div class="risk-item">
+<span class="risk-number">01</span>
+<div class="risk-content">
+<h4>
+                                    Низкая адоптация пользователями
+                                    <i class="fas fa-arrow-right risk-arrow"></i>
+</h4>
+<p class="text-sm text-gray-500 mb-2">Риск того, что депутаты или граждане не будут использовать платформу.</p>
+<div class="mitigation-badge">
+<i class="fas fa-check mr-1"></i> Обучение + Маркетинг включены
+                                </div>
+</div>
+</div>
+<!-- Risk 2 -->
+<div class="risk-item">
+<span class="risk-number">02</span>
+<div class="risk-content">
+<h4>
+                                    Технические сбои и простой
+                                    <i class="fas fa-arrow-right risk-arrow"></i>
+</h4>
+<p class="text-sm text-gray-500 mb-2">Возможная недоступность сервиса в критические моменты.</p>
+<div class="mitigation-badge">
+<i class="fas fa-check mr-1"></i> SLA 99.5% + Ежедневные бэкапы
+                                </div>
+</div>
+</div>
+<!-- Risk 3 -->
+<div class="risk-item">
+<span class="risk-number">03</span>
+<div class="risk-content">
+<h4>
+                                    Утечка персональных данных
+                                    <i class="fas fa-arrow-right risk-arrow"></i>
+</h4>
+<p class="text-sm text-gray-500 mb-2">Риск компрометации данных граждан третьими лицами.</p>
+<div class="mitigation-badge">
+<i class="fas fa-check mr-1"></i> Пентест + Страхование киберрисков
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Our Guarantees -->
+<div class="column-card border-green-200 relative">
+<div class="card-header guarantee-header">
+<div class="header-icon guarantee-icon-bg">
+<i class="fas fa-certificate"></i>
+</div>
+<div>
+<h2 class="header-title text-gray-800">НАШИ ГАРАНТИИ</h2>
+<p class="text-sm text-gray-500 font-medium">Безопасность ваших инвестиций</p>
+</div>
+</div>
+<div class="card-body justify-center">
+<div class="guarantee-item">
+<i class="fas fa-check-circle check-icon"></i>
+<p class="guarantee-text">
+<span class="guarantee-highlight">100% Возврат средств</span><br/>
+                                Если менее 50% депутатов начнут использовать платформу через 2 месяца после внедрения.
+                            </p>
+</div>
+<div class="guarantee-item">
+<i class="fas fa-check-circle check-icon"></i>
+<p class="guarantee-text">
+<span class="guarantee-highlight">Бесплатная техподдержка</span><br/>
+                                Полное сопровождение в течение первых 3 месяцев (onboarding период).
+                            </p>
+</div>
+<div class="guarantee-item">
+<i class="fas fa-check-circle check-icon"></i>
+<p class="guarantee-text">
+<span class="guarantee-highlight">Обучение "под ключ"</span><br/>
+                                Обучение всех депутатов и сотрудников аппарата включено в стоимость внедрения.
+                            </p>
+</div>
+<div class="guarantee-item">
+<i class="fas fa-check-circle check-icon"></i>
+<p class="guarantee-text">
+<span class="guarantee-highlight">Бесплатные обновления</span><br/>
+                                Все новые функции и улучшения безопасности предоставляются без доплаты.
+                            </p>
+</div>
+<img alt="Guarantee Seal" class="trust-seal" src="https://page.gensparksite.com/slides_images/fcbb151f797a72f40979ed2ea7341fdd.png"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-10 bg-white flex items-center justify-between px-16 border-t border-gray-200 mt-auto z-10">
+<div class="text-gray-400 text-xs font-medium">AMANAT CITIZEN PLATFORM</div>
+<div class="flex gap-2">
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-green-500"></div> <!-- Current section indicator -->
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+</div>
+</div>
+</div>
+</body>
+</html>

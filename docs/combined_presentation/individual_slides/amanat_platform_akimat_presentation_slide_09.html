@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Как это работает на практике</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #F8FAFC;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #FFFFFF;
+        }
+
+        .header-bg {
+            background-color: #005A9C; /* KZ Blue */
+            height: 100px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+        }
+
+        .header-accent {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #00B1B0; /* Technology Green */
+        }
+
+        .title-font {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Case Studies Styles */
+        .case-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 100%;
+            justify-content: center;
+        }
+
+        .case-card {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #E2E8F0;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .case-card:hover {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            border-color: #CBD5E1;
+            transform: translateY(-2px);
+        }
+
+        .case-label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 6px 16px;
+            border-bottom-right-radius: 12px;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: white;
+        }
+
+        /* Steps Visualization */
+        .steps-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .step-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 18%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .step-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            font-size: 18px;
+            transition: transform 0.2s ease;
+            border: 2px solid transparent;
+        }
+        
+        .step-item:hover .step-icon {
+            transform: scale(1.1);
+        }
+
+        .step-text {
+            font-size: 11px;
+            color: #64748B;
+            line-height: 1.2;
+            font-weight: 500;
+        }
+
+        .connector-line {
+            position: absolute;
+            top: 24px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background-color: #E2E8F0;
+            z-index: 0;
+        }
+
+        .arrow-right {
+            position: absolute;
+            top: 20px;
+            right: -5px;
+            color: #E2E8F0;
+        }
+
+        /* Case 1 Theme */
+        .theme-1 .case-label { background-color: #3B82F6; }
+        .theme-1 .step-icon { background-color: #EFF6FF; color: #3B82F6; border-color: #DBEAFE; }
+        .theme-1 .connector-line { background-color: #DBEAFE; }
+        .theme-1 .highlight { color: #3B82F6; font-weight: 700; }
+
+        /* Case 2 Theme */
+        .theme-2 .case-label { background-color: #EF4444; }
+        .theme-2 .step-icon { background-color: #FEF2F2; color: #EF4444; border-color: #FEE2E2; }
+        .theme-2 .connector-line { background-color: #FEE2E2; }
+        .theme-2 .highlight { color: #EF4444; font-weight: 700; }
+
+        /* Case 3 Theme */
+        .theme-3 .case-label { background-color: #10B981; }
+        .theme-3 .step-icon { background-color: #ECFDF5; color: #10B981; border-color: #D1FAE5; }
+        .theme-3 .connector-line { background-color: #D1FAE5; }
+        .theme-3 .highlight { color: #10B981; font-weight: 700; }
+
+        .result-badge {
+            background-color: #F8FAFC;
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 1px solid #E2E8F0;
+            font-weight: 600;
+            font-size: 13px;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg z-10">
+<h1 class="title-font font-bold text-3xl text-white tracking-wide">
+                КАК ЭТО РАБОТАЕТ НА ПРАКТИКЕ
+            </h1>
+<div class="header-accent"></div>
+<!-- Slide Number -->
+<div class="absolute right-10 top-8 text-white text-opacity-50 font-mono text-lg">09</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-16 py-8 bg-gray-50 flex flex-col justify-center">
+<div class="case-container">
+<!-- Scenario 1 -->
+<div class="case-card theme-1">
+<div class="case-label">СЦЕНАРИЙ 1: «СЛОМАННЫЙ ФОНАРЬ»</div>
+<div class="flex justify-between items-center mb-6 pl-32">
+<h3 class="font-bold text-xl text-gray-800 title-font">Автоматизация типовых заявок</h3>
+<div class="result-badge">
+<i class="fas fa-check-circle text-blue-500"></i>
+                            Результат: <span class="text-blue-600 ml-1">Решено за 3 дня</span>
+</div>
+</div>
+<div class="steps-container">
+<div class="connector-line"></div>
+<!-- Step 1 -->
+<div class="step-item">
+<div class="step-icon">
+<i class="fas fa-user"></i>
+</div>
+<p class="step-text">Гражданин пишет<br/>в Telegram</p>
+</div>
+<!-- Step 2 -->
+<div class="step-item">
+<div class="step-icon">
+<i class="fas fa-robot"></i>
+</div>
+<p class="step-text">AI определяет:<br/><span class="highlight">Категория: ЖКХ</span></p>
+</div>
+<!-- Step 3 -->
+<div class="step-item">
+<div class="step-icon">
+<i class="fas fa-user-tie"></i>
+</div>
+<p class="step-text">Депутат получает<br/>уведомление</p>
+</div>
+<!-- Step 4 -->
+<div class="step-item">
+<div class="step-icon">
+<i class="fas fa-truck"></i>
+</div>
+<p class="step-text">Передано в<br/>коммунальные службы</p>
+</div>
+<!-- Step 5 -->
+<div class="step-item">
+<div class="step-icon" style="background-color: #3B82F6; color: white;">
+<i class="fas fa-check"></i>
+</div>
+<p class="step-text font-bold text-gray-700">Проблема устранена<br/>+ фотоотчет</p>
+</div>
+</div>
+</div>
+<!-- Scenario 2 -->
+<div class="case-card theme-2">
+<div class="case-label">СЦЕНАРИЙ 2: «ЯМЫ НА ДОРОГЕ»</div>
+<div class="flex justify-between items-center mb-6 pl-32">
+<h3 class="font-bold text-xl text-gray-800 title-font">Краудсорсинг и приоритизация</h3>
+<div class="result-badge">
+<i class="fas fa-arrow-up text-red-500"></i>
+                            Результат: <span class="text-red-600 ml-1">Высокий приоритет</span>
+</div>
+</div>
+<div class="steps-container">
+<div class="connector-line"></div>
+<!-- Step 1 -->
+<div class="step-item">
+<div class="step-icon">
+<i class="fas fa-camera"></i>
+</div>
+<p class="step-text">Фото + GPS<br/>от гражданина</p>
+</div>
+<!-- Step 2 -->
+<div class="step-item">
+<div class="step-icon">
+<i class="fas fa-map-marked-alt"></i>
+</div>
+<p class="step-text">Появление на<br/><span class="highlight">Публичной карте</span></p>
+</div>
+<!-- Step 3 -->
+<div class="step-item">
+<div class="step-icon">
+<i class="fas fa-users"></i>
+</div>
+<p class="step-text">15 жителей нажали<br/>«У меня тоже»</p>
+</div>
+<!-- Step 4 -->
+<div class="step-item">
+<div class="step-icon">
+<i class="fas fa-fire"></i>
+</div>
+<p class="step-text">Статус:<br/><span class="highlight">Критичный</span></p>
+</div>
+<!-- Step 5 -->
+<div class="step-item">
+<div class="step-icon" style="background-color: #EF4444; color: white;">
+<i class="fas fa-building"></i>
+</div>
+<p class="step-text font-bold text-gray-700">Эскалация<br/>в Акимат</p>
+</div>
+</div>
+</div>
+<!-- Scenario 3 -->
+<div class="case-card theme-3">
+<div class="case-label">СЦЕНАРИЙ 3: «КОНТРОЛЬ ЭФФЕКТИВНОСТИ»</div>
+<div class="flex justify-between items-center mb-6 pl-32">
+<h3 class="font-bold text-xl text-gray-800 title-font">Мониторинг KPI депутатов</h3>
+<div class="result-badge">
+<i class="fas fa-chart-line text-green-500"></i>
+                            Результат: <span class="text-green-600 ml-1">Повышение качества</span>
+</div>
+</div>
+<div class="steps-container">
+<div class="connector-line"></div>
+<!-- Step 1 -->
+<div class="step-item">
+<div class="step-icon">
+<i class="fas fa-database"></i>
+</div>
+<p class="step-text">Сбор статистики<br/>за месяц</p>
+</div>
+<!-- Step 2 -->
+<div class="step-item">
+<div class="step-icon">
+<i class="fas fa-columns"></i>
+</div>
+<p class="step-text">Дашборд Акима:<br/><span class="highlight">Сравнение KPI</span></p>
+</div>
+<!-- Step 3 -->
+<div class="step-item">
+<div class="step-icon">
+<i class="fas fa-user-check"></i>
+</div>
+<p class="step-text">Депутат А: 42 реш.<br/>(ср. срок 2 дня)</p>
+</div>
+<!-- Step 4 -->
+<div class="step-item">
+<div class="step-icon">
+<i class="fas fa-user-clock"></i>
+</div>
+<p class="step-text">Депутат Б: 8 реш.<br/>(ср. срок 10 дней)</p>
+</div>
+<!-- Step 5 -->
+<div class="step-item">
+<div class="step-icon" style="background-color: #10B981; color: white;">
+<i class="fas fa-graduation-cap"></i>
+</div>
+<p class="step-text font-bold text-gray-700">Адресное<br/>обучение</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-10 bg-white flex items-center justify-between px-16 border-t border-gray-200 mt-auto z-10">
+<div class="text-gray-400 text-xs font-medium">AMANAT CITIZEN PLATFORM</div>
+<div class="flex gap-2">
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-green-500"></div> <!-- Current section indicator -->
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+</div>
+</div>
+</div>
+</body>
+</html>

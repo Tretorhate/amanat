@@ -1,0 +1,76 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Env
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+.env.*
+backend/.env
+frontend/.env
+telegram_bot/.env
+
+# Build outputs
+dist/
+build/
+coverage/
+*.egg-info/
+.pytest_cache/
+.hypothesis/
+
+# Local configuration
+local_settings.py
+db.sqlite3
+media/
+staticfiles/
+
+# Django specific
+*.mo
+*.pot
+celerybeat-schedule
+celerybeat.pid
+
+# Django apps (could be in parent)
+apps/__pycache__/
+apps/*/__pycache__/
+apps/*/migrations/__pycache__/
+apps/*/migrations/0*.py
+
+# Secrets
+secrets/
+credentials.json
+
+example/

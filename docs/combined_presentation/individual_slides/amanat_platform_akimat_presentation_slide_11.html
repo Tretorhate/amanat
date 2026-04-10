@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Финансовая модель</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #F8FAFC;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #FFFFFF;
+        }
+
+        .header-bg {
+            background-color: #005A9C; /* KZ Blue */
+            height: 100px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+        }
+
+        .header-accent {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #00B1B0; /* Technology Green */
+        }
+
+        .title-font {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .pricing-card {
+            border-radius: 16px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: all 0.3s ease;
+            position: relative;
+            background-color: white;
+            border: 1px solid #E2E8F0;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-recommended {
+            border: 2px solid #00B1B0;
+            background-color: #F0FDFA; /* Teal-50 */
+            transform: scale(1.05);
+            z-index: 10;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-recommended:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+
+        .badge-recommended {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #00B1B0;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-value {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 42px;
+            color: #1E293B;
+            line-height: 1;
+        }
+
+        .price-period {
+            font-size: 14px;
+            color: #64748B;
+            font-weight: 500;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0 0 0;
+            flex-grow: 1;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.4;
+        }
+
+        .feature-icon {
+            margin-right: 12px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .card-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .card-subtitle {
+            font-size: 13px;
+            color: #64748B;
+            margin-bottom: 24px;
+            height: 40px;
+        }
+
+        .btn-pricing {
+            margin-top: 24px;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+
+        .btn-outline {
+            border: 2px solid #E2E8F0;
+            color: #475569;
+            background-color: transparent;
+        }
+        
+        .btn-outline:hover {
+            border-color: #CBD5E1;
+            background-color: #F8FAFC;
+        }
+
+        .btn-primary {
+            background-color: #00B1B0;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 177, 176, 0.2);
+        }
+        
+        .btn-primary:hover {
+            background-color: #009695;
+            box-shadow: 0 10px 15px -3px rgba(0, 177, 176, 0.3);
+        }
+
+        .savings-banner {
+            background-color: #ECFDF5;
+            border: 1px dashed #10B981;
+            border-radius: 8px;
+            padding: 12px 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .tier-city .card-title { color: #3B82F6; }
+        .tier-region .card-title { color: #00B1B0; }
+        .tier-republic .card-title { color: #8B5CF6; }
+
+        .tier-city .feature-icon { color: #3B82F6; }
+        .tier-region .feature-icon { color: #00B1B0; }
+        .tier-republic .feature-icon { color: #8B5CF6; }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg z-10">
+<h1 class="title-font font-bold text-3xl text-white tracking-wide">
+                ПРОЗРАЧНЫЕ И ДОСТУПНЫЕ ЦЕНЫ
+            </h1>
+<div class="header-accent"></div>
+<!-- Slide Number -->
+<div class="absolute right-10 top-8 text-white text-opacity-50 font-mono text-lg">11</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-16 py-8 flex flex-col justify-center bg-gray-50 items-center">
+<!-- Pricing Grid -->
+<div class="grid grid-cols-3 gap-8 w-full max-w-6xl items-center">
+<!-- Tier 1: City -->
+<div class="pricing-card tier-city">
+<div>
+<h3 class="card-title">ГОРОД</h3>
+<p class="card-subtitle">Для малых городов и районных центров</p>
+<div class="flex items-baseline">
+<span class="price-value">$110</span>
+<span class="price-period">/ месяц</span>
+</div>
+</div>
+<ul class="feature-list">
+<li class="feature-item">
+<i class="fas fa-check feature-icon"></i>
+<span>До <strong>100</strong> депутатов</span>
+</li>
+<li class="feature-item">
+<i class="fas fa-check feature-icon"></i>
+<span>До <strong>50,000</strong> граждан</span>
+</li>
+<li class="feature-item">
+<i class="fas fa-check feature-icon"></i>
+<span>Все функции платформы</span>
+</li>
+<li class="feature-item">
+<i class="fas fa-check feature-icon"></i>
+<span>До <strong>5,000</strong> обращений/мес</span>
+</li>
+<li class="feature-item">
+<i class="fas fa-check feature-icon"></i>
+<span>Базовая AI-категоризация</span>
+</li>
+<li class="feature-item">
+<i class="fas fa-envelope feature-icon"></i>
+<span>Поддержка по Email</span>
+</li>
+</ul>
+<button class="btn-pricing btn-outline">Выбрать тариф</button>
+</div>
+<!-- Tier 2: Region (Recommended) -->
+<div class="pricing-card card-recommended tier-region">
+<div class="badge-recommended">Рекомендуем</div>
+<div>
+<h3 class="card-title">ОБЛАСТЬ</h3>
+<p class="card-subtitle">Для областных центров и крупных регионов</p>
+<div class="flex items-baseline">
+<span class="price-value">$550</span>
+<span class="price-period">/ месяц</span>
+</div>
+</div>
+<ul class="feature-list">
+<li class="feature-item">
+<i class="fas fa-check-circle feature-icon"></i>
+<span>До <strong>500</strong> депутатов</span>
+</li>
+<li class="feature-item">
+<i class="fas fa-check-circle feature-icon"></i>
+<span>До <strong>500,000</strong> граждан</span>
+</li>
+<li class="feature-item">
+<i class="fas fa-check-circle feature-icon"></i>
+<span><strong>Локальный LLM</strong> (без лимитов)</span>
+</li>
+<li class="feature-item">
+<i class="fas fa-check-circle feature-icon"></i>
+<span>До <strong>50,000</strong> обращений/мес</span>
+</li>
+<li class="feature-item">
+<i class="fas fa-check-circle feature-icon"></i>
+<span>Интеграция с <strong>egov.kz</strong></span>
+</li>
+<li class="feature-item">
+<i class="fas fa-headset feature-icon"></i>
+<span>Приоритетная поддержка 24/7</span>
+</li>
+</ul>
+<button class="btn-pricing btn-primary">Выбрать тариф</button>
+</div>
+<!-- Tier 3: Republic -->
+<div class="pricing-card tier-republic">
+<div>
+<h3 class="card-title">РЕСПУБЛИКА</h3>
+<p class="card-subtitle">Масштабное внедрение на уровне страны</p>
+<div class="flex items-baseline">
+<span class="text-2xl font-bold text-gray-800 font-montserrat mt-2">Индивидуально</span>
+</div>
+</div>
+<ul class="feature-list">
+<li class="feature-item">
+<i class="fas fa-check feature-icon"></i>
+<span><strong>10,000+</strong> депутатов</span>
+</li>
+<li class="feature-item">
+<i class="fas fa-check feature-icon"></i>
+<span><strong>Федеративная</strong> архитектура</span>
+</li>
+<li class="feature-item">
+<i class="fas fa-check feature-icon"></i>
+<span><strong>Безлимитные</strong> обращения</span>
+</li>
+<li class="feature-item">
+<i class="fas fa-check feature-icon"></i>
+<span>Выделенная команда разработки</span>
+</li>
+<li class="feature-item">
+<i class="fas fa-check feature-icon"></i>
+<span>SLA <strong>99.9%</strong> uptime</span>
+</li>
+<li class="feature-item">
+<i class="fas fa-shield-alt feature-icon"></i>
+<span>Расширенный аудит безопасности</span>
+</li>
+</ul>
+<button class="btn-pricing btn-outline">Связаться с отделом продаж</button>
+</div>
+</div>
+<!-- Savings Banner -->
+<div class="savings-banner">
+<div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 flex-shrink-0">
+<i class="fas fa-piggy-bank text-xl"></i>
+</div>
+<div>
+<p class="text-gray-800 font-medium text-sm">
+<span class="font-bold text-green-700">ЭКОНОМИЯ 90%</span> по сравнению с импортными решениями (от $5,000/мес)
+                </p>
+<p class="text-xs text-gray-500">
+                    Отсутствие лицензионных платежей за пользователя + использование Open Source технологий
+                </p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-10 bg-white flex items-center justify-between px-16 border-t border-gray-200 mt-auto z-10">
+<div class="text-gray-400 text-xs font-medium">AMANAT CITIZEN PLATFORM</div>
+<div class="flex gap-2">
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-green-500"></div> <!-- Current section indicator -->
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+</div>
+</div>
+</div>
+</body>
+</html>

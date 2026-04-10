@@ -1,0 +1,877 @@
+{
+  "common": {
+    "appName": "Аманат",
+    "platform": "\"Аманат\" платформасы",
+    "loading": "Жүктеу орындалуда...",
+    "save": "Сақтау",
+    "cancel": "Болдырмау",
+    "delete": "Өшіру",
+    "edit": "Өңдеу",
+    "close": "Жабу",
+    "confirm": "Растау",
+    "back": "Артқа",
+    "next": "Келесі",
+    "submit": "Жіберу",
+    "search": "Іздеу",
+    "filter": "Сүзгі",
+    "export": "Экспорт",
+    "print": "Басу",
+    "refresh": "Жаңарту",
+    "yes": "Иә",
+    "no": "Жоқ",
+    "error": "Қате",
+    "success": "Табысты",
+    "warning": "Ескерту",
+    "info": "Ақпарат",
+    "personalCabinet": "Жеке кабинет",
+    "myProfile": "Менің профилім",
+    "myDocuments": "Менің құжаттарым",
+    "logout": "Шығу",
+    "logoutSuccess": "Сіз сәтті шықтыңыз",
+    "citizen": "Азамат",
+    "responded": "Жауап берілді",
+    "outOf5": "5-тен",
+    "deleteConfirm": {
+      "title": "Өшіруді растау",
+      "message": "Сіз өшіргіңіз келгеніңізге сигіншіңіз бе",
+      "warning": "Бұл әрекетті болдырмау мүмкін емес.",
+      "confirmLabel": "Енгізіңіз",
+      "confirmKeyword": "ИӘ",
+      "confirmInstruction": "растау үшін",
+      "confirmPlaceholder": "ИӘ енгізіңіз",
+      "deleteButton": "Өшіру",
+      "deletingButton": "Өшірілуде...",
+      "cancelButton": "Болдырмау"
+    },
+    "roles": {
+      "deputy": "Депутат",
+      "administrator": "Администратор",
+      "citizen": "Азамат",
+      "user": "Пайдаланушы"
+    },
+    "notifications": {
+      "title": "Хабарламалар",
+      "markAllAsRead": "Барлығын оқыды деп белгілеу",
+      "noNotifications": "Хабарламалар жоқ",
+      "newNotification": "Жаңа ескерту"
+    }
+  },
+
+  "error": {
+    "notFound": {
+      "title": "Бет табылмады",
+      "description": "Өкінішке орай, сұраған беті болмайды немесе өшіріліді.",
+      "backHome": "Басты бетке оралу"
+    }
+  },
+
+  "nav": {
+    "home": "Басты бет",
+    "dashboard": "Басқару панелі",
+    "profile": "Профиль",
+    "appeals": "Өндіктемелер",
+    "messages": "Хабарламалар",
+    "analytics": "Аналитика",
+    "users": "Пайдаланушылар",
+    "settings": "Параметрлер",
+    "logout": "Шығу",
+    "login": "Кіру",
+    "register": "Тіркелу"
+  },
+  "sidebar": {
+    "deputy": {
+      "dashboard": "Басқару панелі",
+      "constituencies": "Сайлау округтері"
+    },
+    "admin": {
+      "dashboard": "Басқару панелі",
+      "appeals": "Барлық өндіктемелер",
+      "users": "Пайдаланушылар",
+      "constituencies": "Сайлау округтері",
+      "analytics": "Аналитика"
+    }
+  },
+
+  "auth": {
+    "login": {
+      "title": "Аккаунтқа кіру",
+      "username": "Пайдаланушы аты",
+      "password": "Пароль",
+      "usernamePlaceholder": "Пайдаланушы атын енгізіңіз",
+      "passwordPlaceholder": "Парольді енгізіңіз",
+      "submitButton": "Кіру",
+      "submitting": "Кіру...",
+      "backToHome": "Басты бетке оралу",
+      "welcomeMessage": "Қош келдіңіз, {name}!",
+      "errorInvalidCredentials": "Пайдаланушы аты немесе пароль дұрыс емес"
+    },
+    "register": {
+      "title": "Тіркелу",
+      "fullName": "Толық аты-жөні",
+      "email": "Email",
+      "confirmPassword": "Парольді растау",
+      "submitButton": "Тіркелу",
+      "submitting": "Тіркеліп жатыр...",
+      "haveAccount": "Өзінің аккаунты бар ма?",
+      "loginLink": "Кіру",
+      "successMessage": "Тіркелу сәтті болды!",
+      "errorPasswordMismatch": "Пароли сәйкес емес",
+      "errorUserExists": "Мұндай пайдаланушы аты бар болады"
+    },
+    "logout": {
+      "confirm": "Шешімді ойсындырасыз ба?",
+      "success": "Сіз сәтті шықтыңыз"
+    }
+  },
+
+  "home": {
+    "hero": {
+      "title": "Платформа",
+      "titleHighlight": "\"Аманат\"",
+      "subtitle": "Азаматтар мен депутаттар арасындағы тура байланыс. Өндіктемелер беріңіз, статусын өңдеңіз және жауап алыңыз.",
+      "loginButton": "Жүйеге кіру",
+      "registerButton": "Тіркелу"
+    },
+    "features": {
+      "submitAppeals": {
+        "title": "Өндіктемелер беру",
+        "description": "Өндіктемелеріңізді депутатыңызға тура платформа арқылы жіберіңіз"
+      },
+      "directDialog": {
+        "title": "Тура диалог",
+        "description": "Депутаттармен нақты уақытта байланыс жүргізіңіз"
+      },
+      "trackStatus": {
+        "title": "Статусын өңдеу",
+        "description": "Өндіктемелеріңіздің қарауы жүргісін бақылаңыз"
+      }
+    },
+    "analytics": {
+      "title": "Платформа нақты уақытта",
+      "subtitle": "\"Аманат\" платформасының ағымды статистикасы",
+      "totalAppeals": "Барлығы өндіктемелер",
+      "resolved": "Шешілген",
+      "averageResolutionTime": "Орташа шешу уақыты",
+      "resolutionRate": "Шешіну пайызы",
+      "hours": "сағ."
+    },
+    "insights": {
+      "title": "Аналитика және түсініктемелер",
+      "subtitle": "Платформа қызметінің негізгі көрсеткіштері және тенденциялары",
+      "platformActivity": "Платформа белсенділігі",
+      "averageAppealsPerDay": "Орташе {count} өндіктеме күніне",
+      "peakActivity": "Шың белсенділік",
+      "peakActivityDescription": "{count} өндіктеме {date}",
+      "topCategory": "Негізгі категория",
+      "topCategoryDescription": "{category} ({count} өндіктеме)",
+      "activityTrend": "Белсенділік тенденциясы",
+      "trendGrowing": "Өндіктеме саны өсіп келеді",
+      "trendStable": "Өндіктеме саны тұрақты",
+      "noData": "Деректер жоқ"
+    },
+    "charts": {
+      "categoryDistribution": "Санаттар бойынша бөлінісі",
+      "noDataToDisplay": "Көрсету үшін деректер жоқ",
+      "other": "Басқа"
+    },
+    "cta": {
+      "title": "Өндіктемеңізбен бөліскіге дайын сыз ба?",
+      "subtitle": "\"Аманат\" платформасын өздерінің мәселелерін шешу үшін пайдаланып жатқан мың-мың азаматтарға қосылыңыз.",
+      "button": "Бірінші өндіктеме құру"
+    },
+    "footer": {
+      "title": "\"Аманат\" платформасы",
+      "description": "Азаматтар мен олардың өкілдері арасындағы тура байланыс",
+      "navigation": "Навигация",
+      "information": "Ақпарат",
+      "contacts": "Контактілер",
+      "about": "Туралы",
+      "support": "Қолдау",
+      "terms": "Пайдалану ережелері",
+      "copyright": "© 2026 \"Аманат\" платформасы. Барлық құқықтары сақталған."
+    }
+  },
+
+  "appeals": {
+    "status": {
+      "all": "Барлық статустар",
+      "pending": "Күтілуде",
+      "in_progress": "Өңдеу барысында",
+      "resolved": "Шешілген",
+      "rejected": "Қабылданбаған",
+      "closed": "Тұйық"
+    },
+    "priority": {
+      "low": "Төмен",
+      "normal": "Қалыпты",
+      "high": "Жоғары",
+      "urgent": "Шұғыл"
+    },
+    "category": {
+      "all": "Барлық санаттар",
+      "infrastructure": "Инфрақұрылым",
+      "safety": "Қауіпсіздік",
+      "healthcare": "Денсаулық сақтау",
+      "education": "Білім",
+      "environment": "Экология",
+      "transport": "Көлік",
+      "housing": "Тұрғын ғимарат",
+      "utilities": "Коммуналдық қызметтер",
+      "social_services": "Әлеуметтік қызметтер",
+      "other": "Басқа"
+    },
+    "list": {
+      "title": "Өндіктемелер",
+      "myAppeals": "Менің өндіктемелерім",
+      "allAppeals": "Барлық өндіктемелер",
+      "createNew": "Өндіктеме құру",
+      "noAppeals": "Өндіктемелер әлі жоқ",
+      "filters": {
+        "all": "Барлығы",
+        "byStatus": "Статусы бойынша",
+        "byCategory": "Санаты бойынша",
+        "byDate": "Күні бойынша"
+      }
+    },
+    "details": {
+      "title": "Өндіктеме ақпараты",
+      "appealNumber": "Өндіктеме №",
+      "createdAt": "Құрылды",
+      "createdLabel": "Құрылды:",
+      "updatedAt": "Өнделіді",
+      "status": "Статусы",
+      "categoryLabel": "Санаты:",
+      "category": "Санаты",
+      "description": "Сипаттамасы",
+      "attachments": "Іліктемелер",
+      "messages": "Хабарламалар",
+      "firstResponseLabel": "Бірінші жауап:",
+      "closedLabel": "Тұйық:",
+      "deputy": "Депутат",
+      "citizen": "Азамат",
+      "notFound": "Өндіктеме табылмады",
+      "rateQuality": "Шешімнің сапасын бағалаңыз",
+      "yourRating": "Сіздің бағасы: {rating} 5-тен",
+      "history": "Тарихы",
+      "appealCreated": "Өндіктеме құрылды",
+      "deputyResponded": "Депутат өндіктемеге жауап берді",
+      "statusChanged": "Статусы өзгертілді",
+      "recently": "Жақында",
+      "appealClosed": "Өндіктеме тұйық",
+      "qualityRating": "Сапасын бағалау: {rating} 5-тен",
+      "yourDeputy": "Сіздің депутатыңыз",
+      "district": "Округі:",
+      "information": "Ақпарат",
+      "messageCount": "Хабарламалар:",
+      "backToList": "Тізімге оралу",
+      "returnBack": "Артқа оралу",
+      "dialogWithCitizen": "Азаматпен диалог",
+      "citizenInfo": "Азамат туралы ақпарат",
+      "changeHistory": "Өзгерістер тарихы",
+      "fullName": "ТАӘ",
+      "statistics": "Статистика",
+      "messagesCount": "Хабарламалар",
+      "firstResponse": "Бірінші жауап",
+      "closedAt": "Жабылды",
+      "quickActions": "Жылдам әрекеттер",
+      "quickActionsHints": {
+        "useForm": "Статусты өзгерту үшін төмендегі пішінді пайдаланыңыз",
+        "sendMessages": "Чат арқылы хабарламалар жіберіңіз",
+        "watchLimit": "Хабарламалар шегін қадағалаңыз (макс. 10)"
+      },
+      "activityLog": {
+        "appealCreatedByCitizen": "Өтінішті азамат құрды",
+        "youResponded": "Сіз өтінішке жауап бердіңіз",
+        "statusChangedTo": "Статус \"{status}\" деп өзгертілді",
+        "appealClosed": "Өтініш жабылды",
+        "citizenRated": "Азамат жұмысты бағалады: {rating} 5-тен",
+        "recently": "Жақында"
+      },
+      "failedToLoad": "Өтінішті жүктеу мүмкін болмады",
+      "appealNotFound": "Өтініш табылмады",
+      "responseSentSuccess": "Жауап сәтті жіберілді",
+      "errorSendingResponse": "Жауап жіберу кезінде қате",
+      "citizenLabel": "Азамат"
+    },
+    "response": {
+      "title": "Өтінішке жауап",
+      "changeStatus": "Статусты өзгерту",
+      "messageToCitizen": "Азаматқа хабарлама (міндетті емес)",
+      "messagePlaceholder": "Жауабыңызды немесе пікіріңізді енгізіңіз...",
+      "charactersCount": "{count} / 1000 таңба",
+      "internalNotes": "Ішкі жазбалар (азаматқа көрінбейді)",
+      "internalNotesPlaceholder": "Құжаттама үшін ішкі жазбаларды қосыңыз...",
+      "internalNotesCount": "{count} / 500 таңба • Бұл жазбалар азаматқа көрінбейді",
+      "sendResponse": "Жауап жіберу"
+    },
+    "create": {
+      "title": "Жаңа өндіктеме",
+      "selectCategory": "Санатын таңдаңыз",
+      "subject": "Тақырыбы",
+      "subjectPlaceholder": "Өндіктеме мәнін қысқаша сипаттаңыз",
+      "description": "Сипаттамасы",
+      "descriptionPlaceholder": "Өндіктемеңіздің мәселесі немесе сұрағын толығымен сипаттаңыз",
+      "attachFiles": "Файлдарды іліктеу",
+      "submit": "Өндіктеме жіберу",
+      "success": "Өндіктеме сәтті құрылды!",
+      "error": "Өндіктеме құрғанда қате",
+      "infoBoxTitle": "Маңызды ақпарат",
+      "infoAutomatic": "Өндіктеме автоматты түрде сіздің депутатыңызға жіберіледі",
+      "infoCategory": "Өндіктеменің санаты және басымдығы жүйе арқылы автоматты түрде анықталады",
+      "infoMessages": "Депутатпен хабарламалар алмасуға болады (максимум 10 хабарлама)",
+      "infoNotification": "Өндіктемеңіздің қарауы туралы ескерту аласыз",
+      "infoTimeframe": "Өндіктемелерді қарау орташа уақыты - 7 күн"
+    },
+    "messages": {
+      "title": "Хабарламалар",
+      "messageLimit": "Хабарлама шегі: {current} / {max}",
+      "limitReached": "Осы өндіктеме үшін хабарлама шегіне жетті",
+      "placeholder": "Хабарламаңызды енгізіңіз...",
+      "send": "Жіберу",
+      "you": "Сіз",
+      "noMessages": "Хабарламалар әлі жоқ"
+    },
+    "documents": {
+      "pageTitle": "Менің құжаттарым",
+      "pageDescription": "Құжаттарыңызды жүктеп салыңыз және басқарыңыз",
+      "uploadButton": "Құжатты жүктеп салу",
+      "uploadFormTitle": "Жаңа құжатты жүктеп салу",
+      "documentType": "Құжат түрі",
+      "documentNumber": "Құжат номері",
+      "documentNumberPlaceholder": "Номер енгізіңіз",
+      "issueDate": "Берілген күні",
+      "expiryDate": "Қолданысы ғана емес",
+      "issuedBy": "Кім берген",
+      "issuedByPlaceholder": "Құжатты берген орган",
+      "fileLabel": "Құжат файлы (JPG, PNG, PDF, макс. 10MB)",
+      "uploadSubmit": "Құжатты жүктеп салу",
+      "uploading": "Жүктеп жатыр...",
+      "cancel": "Болдырмау",
+      "noDocuments": "Құжаттар жоқ",
+      "noDocumentsDesc": "Сіз әлі құжат жүктеп салмадыңыз",
+      "uploadFirst": "Бірінші құжатты жүктеп салу",
+      "verified": "Тексерілді",
+      "pending": "Тексеріліп жатыр",
+      "uploaded": "Жүктеп салынды",
+      "errorLoadingDocuments": "Құжаттарды жүктеу мүмкін болмады",
+      "errorDocumentNumber": "Құжат номері міндетті",
+      "errorIssueDate": "Берілген күні міндетті",
+      "errorIssuedBy": "Береген орган міндетті",
+      "errorFile": "Құжат файлы міндетті",
+      "errorFormValidation": "Өтінім сізге форма қателерін түзетіңіз",
+      "successUpload": "Құжат сәтті жүктеп салынды",
+      "errorUpload": "Құжат жүктеу қатесі",
+      "confirmDelete": "Бұл құжатты өшіргіңіз келе ме?",
+      "successDelete": "Құжат өшірілді",
+      "errorDelete": "Құжат өшіру қатесі",
+      "errorFileSize": "Файл өлшемі 10MB-дан аспау керек",
+      "errorFileType": "Рұқсат етілген форматтар: JPG, PNG, PDF"
+    }
+  },
+
+  "dashboard": {
+    "citizen": {
+      "title": "Жеке кабинет",
+      "welcome": "Қош келдіңіз, {name}",
+      "stats": {
+        "totalAppeals": "Барлығы өндіктемелер",
+        "pending": "Жауап күтілуде",
+        "inProgress": "Өңдеу барысында",
+        "resolved": "Шешілген"
+      },
+      "recentAppeals": "Менің өндіктемелерім",
+      "viewAll": "Барлығын көру",
+      "createAppeal": "Өндіктеме құру",
+      "profile": "Менің профилім",
+      "profileDesc": "Профильді көру және өңдеу",
+      "documents": "Менің құжаттарым",
+      "documentsDesc": "Құжаттарыңызды басқару",
+      "found": "Табылды",
+      "searchPlaceholder": "Атауы немесе сипаттамасы бойынша іздеңіз...",
+      "allStatuses": "Барлық статустар",
+      "allCategories": "Барлық санаттар",
+      "noAppeals": "Сізде әлі өндіктемелер жоқ",
+      "notFound": "Ештеме табылмады",
+      "createFirst": "Бірінші өндіктеме құру",
+      "deputy": "Депутат",
+      "page": "Бет {current} бастапқы {total}",
+      "previous": "Артқа",
+      "next": "Алға"
+    },
+    "deputy": {
+      "title": "Депутат кабинеті",
+      "welcome": "Қош келдіңіз, {name}",
+      "welcomeSubtitle": "Азаматтардың өтініштерін тиімді және ашық басқарыңыз",
+      "citizenAppeals": "Азаматтардың өтініштері",
+      "found": "Табылды",
+      "searchPlaceholder": "Атауы, сипаттамасы немесе азамат аты бойынша іздеу...",
+      "allCategories": "Барлық санаттар",
+      "thisMonth": "осы айда",
+      "requireAttention": "Назар аударуды талап етеді",
+      "activeTasks": "Белсенді тапсырмалар",
+      "averageRating": "орташа баға",
+      "ready": "Дайын",
+      "unanswered": "Жауапсыз",
+      "noAppealsYet": "Өтініштер әлі жоқ",
+      "noAppealsDescription": "Азаматтар өтініштер берген кезде, олар осында пайда болады",
+      "notFoundTitle": "Ештеме табылмады",
+      "notFoundDescription": "Сүзгілерді немесе іздеу сұрауын өзгертіп көріңіз",
+      "page": "Бет {current} / {total}",
+      "previous": "Артқа",
+      "forward": "Алға",
+      "tabs": {
+        "all": "Барлығы",
+        "pending": "Күтуде",
+        "inProgress": "Орындалуда",
+        "resolved": "Шешілген",
+        "closed": "Жабық",
+        "rejected": "Қабылданбаған",
+        "urgent": "Шұғыл",
+        "unanswered": "Жауапсыз"
+      },
+      "statsLabels": {
+        "totalAppeals": "Барлығы өтініштер",
+        "pendingResponse": "Жауап күтуде",
+        "inProgress": "Орындалуда",
+        "resolved": "Шешілген"
+      },
+      "stats": {
+        "totalAppeals": "Барлығы өндіктемелер",
+        "pending": "Жаңалар",
+        "inProgress": "Өңдеу барысында",
+        "resolved": "Бүгін шешілген"
+      },
+      "district": "Округі",
+      "performance": "Көрсеткіштер",
+      "averageResponseTime": "Орташа жауап уақыты",
+      "satisfactionRate": "Қанағаттану рейтингі"
+    },
+    "admin": {
+      "title": "Администратор панелі",
+      "subtitle": "Жүйені басқарыңыз және барлық өндіктемелерді қадағалаңыз",
+      "stats": {
+        "totalUsers": "Барлығы пайдаланушылар",
+        "totalDeputies": "Депутаттар",
+        "totalCitizens": "Азаматтар",
+        "totalAppeals": "Барлығы өндіктемелер",
+        "totalAppealsLabel": "Барлығы өндіктемелер",
+        "pendingAppeals": "Өңдеуді күтуде",
+        "resolvedAppeals": "Шешілген",
+        "citizens": "Азаматтар",
+        "deputies": "Депутаттар",
+        "averageResponseTime": "Орташа жауап уақыты"
+      },
+      "quickActions": {
+        "allAppeals": {
+          "title": "Барлық өндіктемелер",
+          "description": "Жүйедегі барлық өндіктемелерді көруге және басқаруға",
+          "button": "Ашу"
+        },
+        "users": {
+          "title": "Пайдаланушылар",
+          "description": "Пайдаланушыларды және олардың қол жетімді құқықтарын басқарыңыз",
+          "button": "Ашу"
+        },
+        "analytics": {
+          "title": "Аналитика",
+          "description": "Жүйенің бөлінбеген статистикасы және есептері",
+          "button": "Ашу"
+        }
+      },
+      "systemStatus": {
+        "title": "Жүйе қалпы",
+        "apiServer": "API сервері",
+        "database": "Деректер қоры",
+        "webSocket": "WebSocket",
+        "operational": "Құлай жұмыс істейді",
+        "connected": "Қосылған",
+        "active": "Белсенді"
+      },
+      "systemHealth": "Жүйе қалпы",
+      "recentActivity": "Соңғы әрекеттер"
+    }
+  },
+
+  "profile": {
+    "pageTitle": "Менің профилім",
+    "pageDescription": "Профильді басқару",
+    "title": "Профиль",
+    "personalInfo": "Жеке ақпарат",
+    "fullName": "ТАӘ",
+    "fullNameRequired": "ТАӘ міндетті",
+    "email": "Email",
+    "emailRequired": "Email міндетті",
+    "emailInvalid": "Email форматы дұрыс емес",
+    "phone": "Телефон",
+    "phoneRequired": "Телефон міндетті",
+    "phoneInvalid": "Телефон форматы дұрыс емес",
+    "firstName": "Аты",
+    "lastName": "Тегі",
+    "username": "Пайдаланушы аты:",
+    "usernameLabel": "Пайдаланушы аты",
+    "role": "Рөлі:",
+    "roleLabel": "Рөлі",
+    "district": "Округі",
+    "status": "Статусы:",
+    "active": "Белсенді",
+    "inactive": "Белсенді емес",
+    "additionalInfo": "Қосымша ақпарат",
+    "information": "Ақпарат",
+    "changePasswordTitle": "Парольді өзгерту",
+    "changePassword": "Парольді өзгерту",
+    "currentPassword": "Ағымды пароль",
+    "currentPasswordRequired": "Ағымды пароль міндетті",
+    "newPassword": "Жаңа пароль",
+    "newPasswordRequired": "Жаңа пароль міндетті",
+    "newPasswordMin": "Минимум 8 таңба",
+    "confirmPassword": "Жаңа парольді растау",
+    "passwordMismatch": "Пароли сәйкес емес",
+    "enterPlaceholder": "Енгізіңіз {label}",
+    "notSpecified": "Көрсетілмеген",
+    "saving": "Сақталуда...",
+    "saved": "Сақтау",
+    "cancel": "Өзгертпеу",
+    "updateSuccess": "Өзгерістер сақталды",
+    "updateError": "Сақтау қатесі",
+    "passwordChangeSuccess": "Пароль өзгертілді",
+    "passwordChangeError": "Пароль өзгерту қатесі",
+    "profileNotFound": "Профиль табылмады",
+    "back": "Оралу",
+    "loadError": "Профильді жүктеу мүмкін болмады",
+    "administrator": "Администратор",
+    "deputy": "Депутат",
+    "citizen": "Азамат"
+  },
+
+  "users": {
+    "title": "Пайдаланушыларды басқару",
+    "addUser": "Пайдаланушы қосу",
+    "editUser": "Пайдаланушыны өңдеу",
+    "deleteUser": "Пайдаланушыны өшіру",
+    "confirmDelete": "Бұл пайдаланушыны өшіргіңіз келгеніңізге сигіншіңіз бе?",
+    "role": {
+      "citizen": "Азамат",
+      "deputy": "Депутат",
+      "admin": "Администратор"
+    },
+    "status": {
+      "active": "Белсенді",
+      "inactive": "Неактивті"
+    },
+    "table": {
+      "name": "Аты",
+      "email": "Email",
+      "role": "Рөлі",
+      "status": "Статусы",
+      "actions": "Әрекеттер"
+    }
+  },
+
+  "analytics": {
+    "title": "Аналитика",
+    "overview": "Қарап шығу",
+    "trends": "Үрдістер",
+    "categoryDistribution": "Санаты бойынша бөлу",
+    "statusDistribution": "Статусы бойынша бөлу",
+    "timeAnalysis": "Уақыт талдауы",
+    "deputyPerformance": "Депутат құрылымы",
+    "citizenSatisfaction": "Азаматтардың қанағаттануы",
+    "exportReport": "Есепті экспорт ету",
+    "period": {
+      "today": "Бүгін",
+      "week": "Апта",
+      "month": "Ай",
+      "year": "Жыл",
+      "custom": "Ерікті кезең"
+    }
+  },
+
+  "errors": {
+    "unauthorized": "Қатынасқа рұқсат жоқ",
+    "notFound": "Бет табылмады",
+    "serverError": "Сервер қатесі",
+    "networkError": "Желі қатесі",
+    "unknownError": "Белгісіз қате",
+    "sessionExpired": "Сессия ақталды. Қайта кіріңіз.",
+    "permissionDenied": "Сізде бұл әрекетті орындау құқығы жоқ",
+    "validationError": "Деректерді растау қатесі",
+    "fileUploadError": "Файлды жүктеген кезде қате",
+    "fileSizeError": "Файл өлшемі рұқсатты шегінен асырады"
+  },
+
+  "validation": {
+    "required": "Бұл өрісті толтыру міндетті",
+    "email": "Дұрыс электрондық поштаны енгізіңіз",
+    "phone": "Дұрыс телефон нөмірін енгізіңіз",
+    "minLength": "Ең аз ұзындығы: {min} символ",
+    "maxLength": "Ең көп ұзындығы: {max} символ",
+    "passwordMismatch": "Пароли сәйкес емес",
+    "invalidFormat": "Дұрыс емес пішімі"
+  },
+
+  "deputy": {
+    "constituencies": {
+      "errorLoadingConstituencies": "Округтарды жүктеу қатесі",
+      "updated": "Округ жаңартылды",
+      "created": "Округ құрылды",
+      "errorSaving": "Округты сақтау кезінде қате",
+      "deleted": "Округ өшіріліді",
+      "deletedBulk": "{count} округ өшіріліді",
+      "errorDeleting": "Округты өшіру кезінде қате",
+      "unknownDeputy": "Белгісіз депутат",
+      "title": "Менің сайлау округтерім",
+      "totalCount": "Барлығы округтер: {count}",
+      "selected": "Таңдалған: {count}",
+      "addConstituency": "Округ қосу",
+      "deleteSelected": "Өшіру ({count})",
+      "totalConstituencies": "Барлығы округтер",
+      "table": {
+        "name": "Атауы",
+        "region": "Аймақ",
+        "district": "Аудан",
+        "population": "Халық саны",
+        "createdAt": "Құрылған күні",
+        "actions": "Әрекеттер"
+      },
+      "noConstituencies": "Сізде әлі сайлау округтері жоқ",
+      "noConstituenciesDescription": "Сіз ұсынатын аудандар туралы ақпаратты қосыңыз",
+      "addFirst": "Бірінші округті қосу",
+      "edit": "Өңдеу",
+      "delete": "Өшіру",
+      "refresh": "Жаңарту",
+      "loadError": "Округтерді жүктеу қатесі",
+      "updateSuccess": "Округ жаңартылды",
+      "createSuccess": "Округ құрылды",
+      "saveError": "Округті сақтау қатесі",
+      "deleteSuccess": "Округ өшірілді",
+      "bulkDeleteSuccess": "{count} округ(тер) өшірілді",
+      "deleteError": "Округті өшіру қатесі"
+    },
+    "constituencyForm": {
+      "editTitle": "Сайлау округін өңдеу",
+      "createTitle": "Сайлау округі құру",
+      "deputyLabel": "Депутат *",
+      "deputyPlaceholder": "Депутат таңдаңыз",
+      "nameLabel": "Округ атауы *",
+      "namePlaceholder": "Мысалы: Бірінші округ",
+      "regionLabel": "Аймақ *",
+      "regionPlaceholder": "Мысалы: Астана",
+      "districtLabel": "Аудан *",
+      "districtPlaceholder": "Мысалы: Орталық аудан",
+      "populationLabel": "Халық саны (міндетті емес)",
+      "populationPlaceholder": "Мысалы: 50000",
+      "cancelButton": "Болдырмау",
+      "saveButton": "Сақтау",
+      "savingButton": "Сақталуда...",
+      "errors": {
+        "nameRequired": "Округ атауы міндетті",
+        "nameMaxLength": "Максимум 100 таңба",
+        "regionRequired": "Аймақ міндетті",
+        "regionMaxLength": "Максимум 100 таңба",
+        "districtRequired": "Аудан міндетті",
+        "districtMaxLength": "Максимум 100 таңба",
+        "deputyRequired": "Депутат таңдаңыз",
+        "populationInvalid": "Халық саны сан болуы керек",
+        "populationNegative": "Халық саны теріс болмауы керек"
+      }
+    }
+  },
+
+  "notifications": {
+    "newAppeal": "{name} өндіктемесі белгілі",
+    "appealStatusChanged": "Өндіктеме статусы өзгерді: \"{status}\"",
+    "newMessage": "Өндіктеме №{id} бойынша жаңа хабарлама",
+    "appealAssigned": "Сізге жаңа өндіктеме тағайындалды",
+    "markAllRead": "Барлығын оқылған деп белгіле",
+    "noNotifications": "Ескертпелер жоқ"
+  },
+
+  "time": {
+    "justNow": "Ағымда",
+    "minutesAgo": "{count} мин. бұрын",
+    "hoursAgo": "{count} сағ. бұрын",
+    "daysAgo": "{count} күн бұрын",
+    "weeksAgo": "{count} апта бұрын",
+    "monthsAgo": "{count} ай бұрын"
+  },
+
+  "admin": {
+    "notSpecified": "Көрсетілмеген",
+    "notAssigned": "Тағайындалмаған",
+    "analytics": {
+      "title": "Аналитика және есептеулер",
+      "subtitle": "Платформасының жұмысының詳細 статистикасы",
+      "exportButton": "Есептеуді экспорттау",
+      "statsLabels": {
+        "totalAppeals": "Барлық өндіктемелер",
+        "pendingAppeals": "Жауап күтуде",
+        "inProgressAppeals": "Өңделуде",
+        "resolvedAppeals": "Шешілген",
+        "averageResolutionTime": "Орташа шешу уақыты"
+      }
+    },
+    "appeals": {
+      "title": "Барлық өндіктемелер",
+      "foundCount": "Табылды",
+      "selectedCount": "Таңдалған",
+      "refresh": "Жаңарту",
+      "export": "Экспорт",
+      "filters": {
+        "searchPlaceholder": "Атау, сипаттамасы немесе аты бойынша іздеңіз...",
+        "allStatuses": "Барлық күйлері",
+        "allCategories": "Барлық санаттар",
+        "allPriorities": "Барлық басымдықтар"
+      },
+      "table": {
+        "headers": {
+          "id": "ID",
+          "title": "Атауы",
+          "citizen": "Азамат туралы ақпарат",
+          "deputy": "Тағайындалған депутат",
+          "status": "Күйі",
+          "category": "Санаты",
+          "priority": "Басымдығы",
+          "created": "Құрылғалының күні",
+          "actions": "Әрекеттер",
+          "user": "ТАӘ",
+          "phone": "Телефон",
+          "district": "Округ"
+        }
+      },
+      "details": {
+        "description": "Сипаттамасы",
+        "appealDetails": "Өндіктеме мәліметтері",
+        "status": "Күйі",
+        "category": "Санаты",
+        "priority": "Басымдығы",
+        "messagesCount": "Хабарламалар",
+        "respondedDate": "Жауап берген күні",
+        "satisfactionRating": "Қанағат рейтингі",
+        "rating": "Рейтинг",
+        "noResponse": "Жауабы жоқ"
+      },
+      "emptyState": "Өндіктемелер табылмады",
+      "pagination": {
+        "previous": "Артқа",
+        "next": "Алға",
+        "showing": "Бет {current} / {total}"
+      },
+      "bulkActions": {
+        "selected": "Таңдалған {count}",
+        "changeStatus": "Күйін өзгерту",
+        "delete": "Өшіру"
+      },
+      "deleteItemLabel": "өндіктеме",
+      "deleteItemLabelPlural": "өндіктеме",
+      "selectNone": "Өндіктемелерді таңдаңыз",
+      "selectForDelete": "Өшіру үшін өндіктемелерді таңдаңыз",
+      "selectForExport": "Экспорт үшін өндіктемелерді таңдаңыз",
+      "toasts": {
+        "loadError": "Өндіктемелерді жүктеу қатесі",
+        "statusUpdateSuccess": "{count} өндіктеменің күйі \"{status}\" ге өзгертілді",
+        "statusUpdateError": "Күйін өзгерту кезінде қате",
+        "deleteSuccess": "{count} өндіктеме өшіріліді",
+        "deleteError": "Өндіктемені өшіру кезінде қате",
+        "exportStart": "{count} өндіктемесін экспорттау..."
+      }
+    },
+    "users": {
+      "title": "Пайдаланушыларды басқару",
+      "totalUsers": "Барлық пайдаланушылар",
+      "addUserButton": "Пайдаланушы қосу",
+      "deleteItemLabel": "пайдаланушы",
+      "deleteItemLabelPlural": "пайдаланушы",
+      "stats": {
+        "total": "Барлығы",
+        "admins": "Администраторлар",
+        "deputies": "Депутаттар",
+        "citizens": "Азаматтар",
+        "active": "Белсенді"
+      },
+      "searchPlaceholder": "Аты, электрондық пошта, пайдаланушы аты бойынша іздеңіз...",
+      "roleFilter": {
+        "allRoles": "Барлық рөлі",
+        "admins": "Администраторлар",
+        "deputies": "Депутаттар",
+        "citizens": "Азаматтар"
+      },
+      "table": {
+        "headers": {
+          "user": "Пайдаланушы",
+          "email": "Email",
+          "role": "Рөлі",
+          "status": "Күйі",
+          "actions": "Әрекеттер"
+        }
+      },
+      "status": {
+        "active": "Белсенді",
+        "inactive": "Белсендіге жатпайтын"
+      },
+      "statusToggle": {
+        "active": "Белсенді",
+        "inactive": "Белсендіге жатпайтын"
+      },
+      "notFound": "Пайдаланушылар табылмады",
+      "notSpecified": "Көрсетілмеген",
+      "toasts": {
+        "loadError": "Пайдаланушыларды жүктеу қатесі",
+        "activated": "Пайдаланушы белсендіге ие болды",
+        "deactivated": "Пайдаланушы белсендіге ие емес болды",
+        "toggleError": "Пайдаланушы күйін өзгерту кезінде қате",
+        "createSuccess": "Пайдаланушы құрылды",
+        "updateSuccess": "Пайдаланушы жаңартылды",
+        "deleteSuccess": "Пайдаланушы өшіріліді",
+        "saveError": "Пайдаланушыны сақтау кезінде қате",
+        "bulkDeleteSuccess": "Пайдаланушыларды жаппайтын өшіру"
+      }
+    },
+    "constituencies": {
+      "title": "Сайлау округтері",
+      "addButton": "Округ қосу",
+      "editTitle": "Округты өңдеу",
+      "createTitle": "Округ құру",
+      "successMessage": "Округ сәтті сақталды",
+      "errorMessage": "Округты сақтау кезінде қате"
+    }
+  },
+
+  "users": {
+    "form": {
+      "createTitle": "Пайдаланушы құру",
+      "editTitle": "Пайдаланушыны өңдеу",
+      "labels": {
+        "username": "Пайдаланушы аты",
+        "email": "Email",
+        "firstName": "Аты",
+        "lastName": "Тегі",
+        "phone": "Телефон",
+        "role": "Рөлі",
+        "password": "Пароль",
+        "passwordOptional": "Пароль (бөлінбеген болса босқа қалдырыңыз)"
+      },
+      "placeholders": {
+        "password": "Парольді енгізіңіз",
+        "passwordNoChange": "Өзгертпеңіз"
+      },
+      "roles": {
+        "citizen": "Азамат",
+        "deputy": "Депутат",
+        "admin": "Администратор"
+      },
+      "errors": {
+        "usernameRequired": "Пайдаланушы аты міндетті",
+        "emailRequired": "Email міндетті",
+        "emailInvalid": "Email пішімі дұрыс емес",
+        "firstNameRequired": "Аты міндетті",
+        "lastNameRequired": "Тегі міндетті",
+        "phoneRequired": "Телефон міндетті",
+        "passwordRequired": "Пайдаланушыны құру кезінде пароль міндетті",
+        "passwordMinLength": "Пароль кем дегенде 8 таңба болуы керек"
+      },
+      "cancelButton": "Болдырмау",
+      "saveButton": "Сақтау",
+      "savingButton": "Сақталуда..."
+    }
+  }
+}

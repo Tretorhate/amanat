@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>От пилота до полного запуска за 4–6 месяцев</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #F8FAFC;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #FFFFFF;
+        }
+
+        .header-bg {
+            background-color: #005A9C; /* KZ Blue */
+            height: 100px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+        }
+
+        .header-accent {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #00B1B0; /* Technology Green */
+        }
+
+        .title-font {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Timeline Styles */
+        .timeline-container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            width: 100%;
+            padding-top: 30px;
+        }
+
+        .timeline-bar {
+            position: absolute;
+            top: 24px;
+            left: 12%;
+            right: 12%;
+            height: 4px;
+            background-color: #E2E8F0;
+            z-index: 0;
+        }
+
+        .timeline-progress {
+            position: absolute;
+            top: 24px;
+            left: 12%;
+            width: 0%; /* Can be animated */
+            height: 4px;
+            background-color: #00B1B0;
+            z-index: 1;
+        }
+
+        .step-card {
+            width: 23%;
+            background-color: white;
+            border-radius: 12px;
+            border: 1px solid #E2E8F0;
+            padding: 24px 20px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            margin-top: 40px;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: #CBD5E1;
+        }
+
+        .step-indicator {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: white;
+            border: 4px solid #E2E8F0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: #64748B;
+            z-index: 20;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .step-card:hover .step-indicator {
+            border-color: #00B1B0;
+            color: #00B1B0;
+            background-color: #F0FDFA;
+        }
+        
+        /* Step Themes */
+        .step-0 .step-indicator { color: #64748B; }
+        .step-1 .step-indicator { color: #3B82F6; border-color: #BFDBFE; }
+        .step-2 .step-indicator { color: #00B1B0; border-color: #99F6E4; }
+        .step-3 .step-indicator { color: #8B5CF6; border-color: #DDD6FE; }
+
+        .step-header {
+            margin-bottom: 16px;
+            text-align: center;
+            border-bottom: 1px solid #F1F5F9;
+            padding-bottom: 12px;
+        }
+
+        .step-title {
+            font-weight: 700;
+            font-size: 18px;
+            color: #1E293B;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .step-duration {
+            font-size: 12px;
+            font-weight: 600;
+            color: #64748B;
+            margin-top: 4px;
+            display: inline-block;
+            background-color: #F8FAFC;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #475569;
+            line-height: 1.4;
+        }
+
+        .task-icon {
+            margin-right: 10px;
+            margin-top: 3px;
+            flex-shrink: 0;
+            font-size: 12px;
+        }
+        
+        .step-0 .task-icon { color: #64748B; }
+        .step-1 .task-icon { color: #3B82F6; }
+        .step-2 .task-icon { color: #00B1B0; }
+        .step-3 .task-icon { color: #8B5CF6; }
+
+        .step-0:hover { border-top: 4px solid #64748B; }
+        .step-1:hover { border-top: 4px solid #3B82F6; }
+        .step-2:hover { border-top: 4px solid #00B1B0; }
+        .step-3:hover { border-top: 4px solid #8B5CF6; }
+
+        /* Connector arrows */
+        .arrow-connector {
+            position: absolute;
+            top: 22px;
+            right: -25px;
+            color: #CBD5E1;
+            font-size: 16px;
+            z-index: 5;
+        }
+
+        .total-time-badge {
+            position: absolute;
+            top: -10px;
+            right: 0;
+            background-color: #005A9C;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg z-10">
+<h1 class="title-font font-bold text-3xl text-white tracking-wide">
+                ОТ ПИЛОТА ДО ПОЛНОГО ЗАПУСКА ЗА 4–6 МЕСЯЦЕВ
+            </h1>
+<div class="header-accent"></div>
+<!-- Slide Number -->
+<div class="absolute right-10 top-8 text-white text-opacity-50 font-mono text-lg">12</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-16 py-8 flex flex-col justify-center bg-gray-50">
+<!-- Timeline Container -->
+<div class="relative w-full max-w-6xl mx-auto">
+<div class="total-time-badge">
+<i class="far fa-clock mr-2"></i> Общий срок: 4-6 месяцев
+                </div>
+<div class="timeline-container">
+<!-- Background Line -->
+<div class="timeline-bar"></div>
+<!-- Step 0: Preparation -->
+<div class="step-card step-0">
+<div class="step-indicator">0</div>
+<i class="fas fa-chevron-right arrow-connector"></i>
+<div class="step-header">
+<h3 class="step-title">Подготовка</h3>
+<span class="step-duration">2-4 недели</span>
+</div>
+<ul class="task-list">
+<li class="task-item">
+<i class="fas fa-file-contract task-icon"></i>
+<p>Регистрация оператора персональных данных</p>
+</li>
+<li class="task-item">
+<i class="fas fa-university task-icon"></i>
+<p>Согласование с Минцифры РК</p>
+</li>
+<li class="task-item">
+<i class="fas fa-cog task-icon"></i>
+<p>Техническая настройка окружения</p>
+</li>
+</ul>
+</div>
+<!-- Step 1: Pilot -->
+<div class="step-card step-1">
+<div class="step-indicator">1</div>
+<i class="fas fa-chevron-right arrow-connector"></i>
+<div class="step-header">
+<h3 class="step-title text-blue-600">Пилот</h3>
+<span class="step-duration text-blue-600 bg-blue-50">1-2 месяца</span>
+</div>
+<ul class="task-list">
+<li class="task-item">
+<i class="fas fa-map-marker-alt task-icon"></i>
+<p>Запуск в <strong>2 округах</strong> (5-10 депутатов)</p>
+</li>
+<li class="task-item">
+<i class="fas fa-chalkboard-teacher task-icon"></i>
+<p>Обучение депутатов и сотрудников</p>
+</li>
+<li class="task-item">
+<i class="fas fa-comments task-icon"></i>
+<p>Сбор обратной связи и доработка</p>
+</li>
+</ul>
+</div>
+<!-- Step 2: Expansion -->
+<div class="step-card step-2">
+<div class="step-indicator">2</div>
+<i class="fas fa-chevron-right arrow-connector"></i>
+<div class="step-header">
+<h3 class="step-title text-teal-600">Расширение</h3>
+<span class="step-duration text-teal-600 bg-teal-50">2-3 месяца</span>
+</div>
+<ul class="task-list">
+<li class="task-item">
+<i class="fas fa-city task-icon"></i>
+<p>Масштабирование на весь город/район</p>
+</li>
+<li class="task-item">
+<i class="fas fa-map-marked-alt task-icon"></i>
+<p>Запуск <strong>Публичной карты</strong> проблем</p>
+</li>
+<li class="task-item">
+<i class="fas fa-bullhorn task-icon"></i>
+<p>Маркетинговая кампания для граждан</p>
+</li>
+</ul>
+</div>
+<!-- Step 3: Scale -->
+<div class="step-card step-3">
+<div class="step-indicator">3</div>
+<div class="step-header">
+<h3 class="step-title text-purple-600">Масштаб</h3>
+<span class="step-duration text-purple-600 bg-purple-50">3-6 месяцев</span>
+</div>
+<ul class="task-list">
+<li class="task-item">
+<i class="fas fa-globe-asia task-icon"></i>
+<p>Охват всей области / региона</p>
+</li>
+<li class="task-item">
+<i class="fas fa-plug task-icon"></i>
+<p>Интеграция с госсистемами (egov, 109)</p>
+</li>
+<li class="task-item">
+<i class="fas fa-chart-pie task-icon"></i>
+<p>Централизованная аналитика</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Bottom Note -->
+<div class="mt-12 text-center">
+<div class="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-sm border border-gray-100">
+<div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+<i class="fas fa-info-circle"></i>
+</div>
+<p class="text-gray-600 text-sm">
+                        Параллельно ведется постоянная <strong>техническая поддержка</strong> и мониторинг безопасности на всех этапах.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-10 bg-white flex items-center justify-between px-16 border-t border-gray-200 mt-auto z-10">
+<div class="text-gray-400 text-xs font-medium">AMANAT CITIZEN PLATFORM</div>
+<div class="flex gap-2">
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-green-500"></div> <!-- Current section indicator -->
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+</div>
+</div>
+</div>
+</body>
+</html>
