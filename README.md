@@ -59,19 +59,50 @@ Python-based Telegram bot for notifications and simple interactions.
 
 ## Quick Start
 
-### Backend Setup
-1. Navigate to the backend directory: `cd backend/`
-2. Follow the setup instructions in the backend README
+### Local development with Docker
 
-### Frontend Setup
-1. Navigate to the frontend directory: `cd frontend/`
-2. Install dependencies: `npm install`
-3. Start the development server: `npm start`
+The easiest way to run the whole project locally is from the repository root:
 
-### Telegram Bot Setup
-1. Navigate to the telegram-bot directory: `cd telegram-bot/`
-2. Install dependencies: `pip install -r requirements.txt`
-3. Configure the bot token and start the bot
+```bash
+cp .env.example .env
+docker compose up --build
+```
+
+Open:
+- Frontend: `http://localhost:3000`
+- Backend API: `http://localhost:8000`
+- API docs: `http://localhost:8000/api/docs/`
+
+Stop everything:
+
+```bash
+docker compose down
+```
+
+Run with Telegram bot too:
+
+```bash
+docker compose --profile bot up --build
+```
+
+Useful commands:
+
+```bash
+docker compose logs -f
+docker compose exec backend python manage.py createsuperuser
+docker compose exec backend pytest
+```
+
+For the full local-container workflow, see:
+- `docs/architecture/08-development-workflow.md`
+- `deploy/README.md`
+
+### Service-level host/hybrid setup
+
+If you want to run services directly on your host instead of fully in Docker, env examples are available here:
+- `backend/.env.example`
+- `frontend/.env.example`
+- `telegram_bot/.env.example`
 
 ## Features
 

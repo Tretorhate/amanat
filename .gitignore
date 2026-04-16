@@ -28,6 +28,10 @@ env/
 .DS_Store
 Thumbs.db
 
+# OpenSpec
+.pi/
+openspec/
+
 # Logs
 logs/
 *.log
